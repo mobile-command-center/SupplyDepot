@@ -1,0 +1,53 @@
+{
+  "name": "supplydepot",
+  "version": "1.0.0",
+  "description": "가입 신청 페이지 이다.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobile-command-center/SupplyDepot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mobile-command-center/SupplyDepot/issues"
+  },
+  "homepage": "https://github.com/mobile-command-center/SupplyDepot#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/sinon": "^7.0.11",
+    "@types/sinon-chai": "^3.2.2",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "husky": "^1.3.1",
+    "karma": "^4.0.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-rollup-preprocessor": "^7.0.0",
+    "karma-safari-launcher": "^1.0.0",
+    "karma-sinon": "^1.0.5",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "print-sizes": "0.0.4",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.9.0",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "sinon": "^7.3.1",
+    "sinon-chai": "^3.3.0",
+    "source-map-support": "^0.5.11",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.15.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.4.2"
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "lib": [
+            "dom",
+            "es2018"
+        ],
+        "types": [ "node" ],
+        "declaration": true,
+        "baseUrl": "../../src",
+        "outDir": "../../dist/",
+        "strict": true,
+        "esModuleInterop": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "pretty": true
+    },
+    "include": [
+        "../../src/**/*"
+    ],
+    "exclude": [
+        "../../config",
+        "../../node_modules",
+        "../../bower_components",
+        "../../dist",
+        "../../**/*.spec.ts"
+    ]
+  }

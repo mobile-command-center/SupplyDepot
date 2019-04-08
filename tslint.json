@@ -1,0 +1,9 @@
+{
+    "defaultSeverity": "error", //Severity Level을 어떤것으로 할지 지정, error, warning, off 값 허용
+    "extends": [
+        "tslint:recommended"    //tslint 설정파일들을 지정
+    ],
+    "rules": {}, // *.ts, *.tsx 파일들에 적용할 rule들을 지정, 각각의 Rule은 Object로 지정한다.
+    "jsRules": {}, // *.js, *.jsx 파일들에 적용할 rule 들을 지정
+    "rulesDirectory": [] // 별도로 정의한 CustomeRule 파일들에 대한 경로
+}

@@ -1,0 +1,681 @@
+<html><head><title>:::::::SK 가입센터:::::::</title>
+<meta http-equiv="Content-Language" content="ko">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="stylesheet" href="style.asp?mobile_chk=X">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+<script type="text/Javascript" src="/include/js/jquery-1.9.1.js"></script>
+<script type="text/Javascript" src="/include/js/jquery-ui-1.10.3.custom.js"></script>
+<script type="text/JavaScript" src="./common.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script><script charset="UTF-8" type="text/javascript" src="http://t1.daumcdn.net/postcode/api/core/190404/1554361093331/190404.js"></script>
+
+<script type="text/JavaScript">
+<!--
+window.onload	= function()
+{
+	event_style_view('frm_regist','A');
+	event_style_view('frm_regist','B');
+}
+
+function fnc_tel_change(Value)
+{
+	var frm = document.getElementById("frm_regist");
+
+	var iLen = String(Value).length;
+    Value	= String(Value).substring(iLen, iLen - 1);
+	frm.board_move_chk.value = Value;
+	
+	event_style_view('frm_regist','B');
+}
+-->
+</script>
+
+
+</head><body><form id="frm_regist" name="frm_regist" action="regist_ok.asp" enctype="MULTIPART/FORM-DATA" method="POST"> 
+<input type="hidden" name="m_id" value="pengtong">
+<input type="hidden" name="com_chk" value="SK">
+<input type="hidden" name="board_move_chk" value="">
+<input type="hidden" name="g_article_idx1" value="78">
+
+<div id="application">
+
+	<div class="appliTop">
+    	<p class="appliLogo"><img src="/images/icon_sk.gif"></p>
+        <p class="appliTopTit">가입신청서<span>온라인 신청서를 작성하시면 선 예약접수가 되고 선 해피콜, 개통이 됩니다.</span></p>
+        <!--<p class="appliCall">대표번호<span>070-7711-8012</span></p>-->
+    </div>
+    
+    <div class="appliForm">
+  	  	<p class="appliTit"><img src="/images/icon_check.gif">가입자정보</p>
+
+
+       <table cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td class="tdFirst">가입자명</td>
+				<td>
+					<input type="text" name="c_name" value="" class="txtbox Wid30 mWid70"></td>
+			</tr>
+			<tr>
+			  <td class="tdFirst">휴대폰</td>
+			  <td>
+				<select name="c_tel2_type" class="txtbox  Wid15 mWid20">
+				<option value="">::통신사:: </option>
+				<option value="SK">SK</option>
+				<option value="LG">LG </option>
+				<option value="KT">KT</option>
+				<option value="KT알뜰폰">KT알뜰폰</option>
+				<option value="LG알뜰폰">LG알뜰폰</option>
+				<option value="SK알뜰폰">SK알뜰폰</option>
+				</select>
+				
+				<select name="c_tel21" class="txtbox Wid10 mWid20">
+				<option value="010">010</option>
+				<option value="010">011</option>
+				<option value="010">016</option>
+				<option value="010">017</option>
+				<option value="010">019</option>
+				</select>
+
+				<input type="text" name="c_tel22" class="txtbox Wid10 mWid20" maxlength="4">-<input type="text" name="c_tel23" class="txtbox Wid10 mWid20" maxlength="4">
+
+				<select name="g_auth" class="txtbox">
+				<option value="">::본인여부::</option>
+				<option value="본인">본인</option>
+				<option value="본인아님">본인아님</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+			  <td class="tdFirst">비상연락처</td>
+			  <td>
+				<input type="text" name="c_tel11" class="txtbox Wid10 mWid20" style="ime-mode:disabled;" onkeyup="fncOnlyNum(this);">-<input type="text" name="c_tel12" class="txtbox Wid10 mWid20" maxlength="4" onkeyup="fncOnlyNum(this);">-<input type="text" name="c_tel13" class="txtbox Wid10 mWid20" maxlength="4" onkeyup="fncOnlyNum(this);">
+				</td>
+			</tr>
+			<tr>
+			  <td class="tdFirst">이메일</td>
+			  <td>
+					<input type="text" id="c_email1" name="c_email1" class="txtbox Wid20 mWid20">
+					@
+					<input type="text" id="c_email2" name="c_email2" readonly="true" class="txtbox Wid20 mWid30">
+					
+					<select name="emailCheck" onchange="SetEmailTail(emailCheck.options[this.selectedIndex].value)" class="txtbox Wid20 mWid20">
+					<option value="notSelected">::선택하세요::</option>
+					<option value="etc">직접입력</option>
+					<option value="naver.com">naver.com</option>
+					<option value="nate.com">nate.com</option>
+					<option value="empal.com">empal.com</option>
+					<option value="hotmail.com">hotmail.com</option>
+					<option value="lycos.co.kr">lycos.co.kr</option>
+					<option value="msn.com">msn.com</option>
+					<option value="hanmail.net">hanmail.net</option>
+					<option value="yahoo.com">yahoo.com</option>
+					<option value="korea.com">korea.com</option>
+					<option value="kornet.net">kornet.net</option>
+					<option value="yahoo.co.kr">yahoo.co.kr</option>
+					<option value="kebi.com">kebi.com</option>
+					<option value="orgio.net">orgio.net</option>
+					<option value="paran.com">paran.com</option>    
+					<option value="gmail.com">gmail.com</option>
+				   </select>
+				  
+
+				</td>
+			</tr>
+			<tr>
+			  <td class="tdFirst">주소</td>
+			  <td><p style="width:100%;">
+				<input type="text" id="c_zipcode1" name="c_zipcode1" class="txtbox" value="" size="3" maxlength="3" style="ime-mode:disabled;width:30px;">-<input type="text" id="c_zipcode2" name="c_zipcode2" class="txtbox" value="" size="3" maxlength="3" style="width:30px;ime-mode:disabled;">
+				<input type="text" id="c_address" name="c_address" class="txtbox Wid50 mWid70" value=""><span class="appliBtn" onclick="sample4_execDaumPostcode('c_zipcode1','c_zipcode2','c_address');" style="cursor:pointer;"><span>우편번호</span></span></p>
+				
+
+			  </td>
+			</tr>
+			<tr>
+			  <td class="tdFirst">생년월일</td>
+			  <td><input type="text" name="c_jumin1" value="" class="txtbox" style="width:80px;ime-mode:disabled;" onkeyup="fncOnlyNumber(this);"> ※ YYMMDD </td>
+			</tr>
+
+		</tbody>
+		</table>
+
+        
+
+      	<div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">납부자정보</p>
+        	<p class="appliInfo"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_custom_copy('frm_regist',this);"> 위 정보와 같음 </p></div>
+        <table cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="tdFirst">납부 정보 </td>
+                    <td>
+						<input type="radio" name="g_give_type" value="A" onclick="event_style_view('frm_regist','A');" checked="">계좌이체&nbsp;
+						<input type="radio" name="g_give_type" value="B" onclick="event_style_view('frm_regist','A');">카드납부
+					</td>
+                </tr>
+                <tr id="style_view_10" style="">
+                  <td class="tdFirst">은행명</td>
+                  <td>
+					<select name="g_bank_cd" class="txtbox Wid30 mWid70">
+					<option value="0" class="txtbox">::지급은행::</option>
+						
+					<option value="1">한국은행</option>
+						
+					<option value="2">산업은행</option>
+						
+					<option value="3">기업은행</option>
+						
+					<option value="4">외환은행</option>
+						
+					<option value="5">국민은행</option>
+						
+					<option value="6">수협중앙회</option>
+						
+					<option value="7">한국수출입은행</option>
+						
+					<option value="8">농협</option>
+						
+					<option value="9">우리은행</option>
+						
+					<option value="10">조흥은행</option>
+						
+					<option value="11">제일은행</option>
+						
+					<option value="12">서울은행</option>
+						
+					<option value="13">신한은행</option>
+						
+					<option value="14">광주은행</option>
+						
+					<option value="15">새마을금고</option>
+						
+					<option value="16">신협</option>
+						
+					<option value="17">하나은행</option>
+						
+					<option value="18">우체국</option>
+						
+					<option value="19">전북은행</option>
+						
+					<option value="20">대구은행</option>
+						
+					<option value="21">부산은행</option>
+						
+					<option value="22">씨티은행</option>
+						
+					<option value="23">경남은행</option>
+						
+					<option value="24">제주은행</option>
+						
+					<option value="25">스위스 저축은행</option>
+						
+					<option value="26">축협</option>
+						
+					<option value="27">현대증권</option>
+						
+					<option value="28">미래에셋증권</option>
+						
+					<option value="29">대우증권</option>
+						
+					<option value="30">삼성증권</option>
+						
+					<option value="31">한국투자증권</option>
+						
+					<option value="32">우리투자증권</option>
+						
+					<option value="33">하이투자증권</option>
+						
+					<option value="34">에이치엠씨증권</option>
+						
+					<option value="35">에스케이증권</option>
+						
+					<option value="36">한화증권</option>
+						
+					<option value="37">하나대투증권</option>
+						
+					<option value="38">신한금융투자</option>
+						
+					<option value="39">메리츠증권</option>
+						
+					<option value="40">유진투자증권</option>
+						
+					<option value="41">신영증권</option>
+						
+					<option value="42">교보증권</option>
+						
+					<option value="43">산림조합</option>
+						
+					<option value="44">부국증권</option>
+						
+					<option value="45">대신증권</option>
+						
+					<option value="46">동부증권</option>
+						
+					<option value="47">이트레이드증권</option>
+						
+					<option value="48">솔로몬투자증권</option>
+						
+					<option value="49">NH투자증권</option>
+						
+					<option value="50">LIG투자증권</option>
+						
+					<option value="51">키움증권</option>
+						
+					<option value="52">HSBC</option>
+						
+					<option value="53">JP 모간</option>
+						
+					<option value="54">도이치뱅크</option>
+						
+					<option value="55">뱅크오브아메리카</option>
+						
+					<option value="56">동양종합금융증권</option>
+						
+					<option value="57">미쓰비시도쿄UFJ</option>
+						
+					<option value="58">카카오뱅크</option>
+						
+					<option value="59">케이뱅크</option>
+					 
+					</select></td>
+                </tr>
+                <tr id="style_view_11" style="">
+                  <td class="tdFirst">계좌번호</td>
+                  <td><input type="text" name="g_bank_no" value="" class="txtbox Wid40 mWid70" style="ime-mode:disabled;" onkeyup="fncOnlyNum(this);"></td>
+                </tr>
+                <tr id="style_view_12" style="">
+                  <td class="tdFirst">예금주</td>
+                  <td><input type="text" name="g_bank_name" value="" class="txtbox Wid30 mWid70"></td>
+                </tr>
+
+				<tr height="30" id="style_view_13" style="display: none;"> 
+					<td class="tdFirst">카드정보</td>
+					<td>
+						<select name="g_card_cd" class="txtbox Wid30 mWid70">
+						<option value="0" selected=""> ::카드사:: </option>
+							
+						<option value="14">광주카드</option>
+							
+						<option value="5">농협(BC)카드</option>
+							
+						<option value="12">롯데카드</option>
+							
+						<option value="2">비씨카드</option>
+							
+						<option value="15">산업은행카드</option>
+							
+						<option value="6">삼성카드</option>
+							
+						<option value="16">수협카드</option>
+							
+						<option value="11">신한카드</option>
+							
+						<option value="13">씨티카드</option>
+							
+						<option value="9">외환카드</option>
+							
+						<option value="3">우리카드</option>
+							
+						<option value="17">전북은행카드</option>
+							
+						<option value="18">제주은행카드</option>
+							
+						<option value="4">하나(BC)카드</option>
+							
+						<option value="7">하나카드</option>
+							
+						<option value="8">한미카드</option>
+							
+						<option value="10">현대카드</option>
+							
+						<option value="1">KB카드</option>
+							
+						<option value="19">LG카드</option>
+						 
+							</select></td>
+				</tr>
+				<tr height="30" id="style_view_14" style="display: none;">
+
+					<td class="tdFirst">카드번호 </td>
+					<td>
+						<input type="text" name="g_card_no" class="txtbox Wid30 mWid70" maxlength="30" style="ime-mode:disabled;" onkeyup="fncOnlyNum(this); fncReplaceCheck(this,'.'); fncReplaceCheck(this,','); fncReplaceCheck(this,'/'); ">
+						&nbsp;&nbsp;&nbsp;
+						유효기간
+						<input type="text" name="g_card_gigan" class="txtbox" size="4" maxlength="4" style="width:30px;ime-mode:disabled;" onkeyup="fncOnlyNumber(this);">년&nbsp;
+						<input type="text" name="g_card_gigan1" class="txtbox" size="2" maxlength="2" style="width:30px;ime-mode:disabled;" onkeyup="fncOnlyNumber(this);">월&nbsp;					
+					</td>
+				</tr>
+				<tr height="30" id="style_view_15" style="display: none;">
+					<td class="tdFirst">카드주 명</td>
+					<td>
+						<input type="text" name="g_card_name" class="txtbox Wid30 mWid70" size="15" maxlength="15"></td>
+				</tr> 
+
+            </tbody>
+		</table>
+
+
+      	<div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">사은품 계좌
+			</p><p class="appliInfo"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_sp_bank_copy('frm_regist',this);"> 위 정보와 같음 </p>
+		</div>
+		
+        <table cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td class="tdFirst">사은품 계좌 </td>
+				<td>
+					<select name="g_sp_bank_code" class="txtbox Wid30 mWid70">
+					<option value="0"> 지급은행 
+						
+					</option><option value="23">경남은행</option>
+						
+					<option value="14">광주은행</option>
+						
+					<option value="42">교보증권</option>
+						
+					<option value="5">국민은행</option>
+						
+					<option value="3">기업은행</option>
+						
+					<option value="8">농협</option>
+						
+					<option value="20">대구은행</option>
+						
+					<option value="45">대신증권</option>
+						
+					<option value="29">대우증권</option>
+						
+					<option value="54">도이치뱅크</option>
+						
+					<option value="46">동부증권</option>
+						
+					<option value="56">동양종합금융증권</option>
+						
+					<option value="39">메리츠증권</option>
+						
+					<option value="28">미래에셋증권</option>
+						
+					<option value="57">미쓰비시도쿄UFJ</option>
+						
+					<option value="55">뱅크오브아메리카</option>
+						
+					<option value="44">부국증권</option>
+						
+					<option value="21">부산은행</option>
+						
+					<option value="43">산림조합</option>
+						
+					<option value="2">산업은행</option>
+						
+					<option value="30">삼성증권</option>
+						
+					<option value="15">새마을금고</option>
+						
+					<option value="12">서울은행</option>
+						
+					<option value="48">솔로몬투자증권</option>
+						
+					<option value="6">수협중앙회</option>
+						
+					<option value="25">스위스 저축은행</option>
+						
+					<option value="41">신영증권</option>
+						
+					<option value="38">신한금융투자</option>
+						
+					<option value="13">신한은행</option>
+						
+					<option value="16">신협</option>
+						
+					<option value="22">씨티은행</option>
+						
+					<option value="35">에스케이증권</option>
+						
+					<option value="34">에이치엠씨증권</option>
+						
+					<option value="4">외환은행</option>
+						
+					<option value="9">우리은행</option>
+						
+					<option value="32">우리투자증권</option>
+						
+					<option value="18">우체국</option>
+						
+					<option value="40">유진투자증권</option>
+						
+					<option value="47">이트레이드증권</option>
+						
+					<option value="19">전북은행</option>
+						
+					<option value="11">제일은행</option>
+						
+					<option value="24">제주은행</option>
+						
+					<option value="10">조흥은행</option>
+						
+					<option value="26">축협</option>
+						
+					<option value="58">카카오뱅크</option>
+						
+					<option value="59">케이뱅크</option>
+						
+					<option value="51">키움증권</option>
+						
+					<option value="37">하나대투증권</option>
+						
+					<option value="17">하나은행</option>
+						
+					<option value="33">하이투자증권</option>
+						
+					<option value="7">한국수출입은행</option>
+						
+					<option value="1">한국은행</option>
+						
+					<option value="31">한국투자증권</option>
+						
+					<option value="36">한화증권</option>
+						
+					<option value="27">현대증권</option>
+						
+					<option value="52">HSBC</option>
+						
+					<option value="53">JP 모간</option>
+						
+					<option value="50">LIG투자증권</option>
+						
+					<option value="49">NH투자증권</option>
+					 
+					</select></td>
+			</tr>
+			<tr>
+				<td class="tdFirst">※계좌번호 </td>
+				<td>
+					<input type="text" name="g_sp_bank_acount" class="txtbox  Wid30 mWid70" value="" size="25" maxlength="30" style="ime-mode:disabled;" onkeyup="fncOnlyNum(this); fncReplaceCheck(this,'.'); fncReplaceCheck(this,',');"></td>
+			</tr>
+			<tr height="30">
+				<td class="tdFirst">※ 예 금 주 
+				</td><td>
+					<input type="text" name="g_sp_bank_name" class="txtbox" value="" size="10" maxlength="10"></td>
+			
+			</tr> 
+		</tbody></table>
+
+
+
+
+      	<p class="appliTit"><img src="/images/icon_check.gif">상품정보</p>
+        <table cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td class="tdFirst">가입 상품 </td>
+				<td>
+					<select name="board_internet" class="txtbox Wid19 mWid70">
+					<option value="">::인터넷::</option>	
+  	
+			<option value="스마트 다이렉트(100M)">스마트 다이렉트(100M)</option>
+  	
+			<option value="기가인터넷 라이트(500M)">기가인터넷 라이트(500M)</option>
+  	
+			<option value="기가인터넷(1G)">기가인터넷(1G)</option>
+  
+					</select>
+					<select name="board_tv" class="txtbox Wid19 mWid70">
+					<option value="">::TV ::</option>	
+  	
+			<option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
+  	
+			<option value="TV스마트플러스 - 211채널">TV스마트플러스 - 211채널</option>
+  	
+			<option value="TV프라임 - 234채널">TV프라임 - 234채널</option>
+  
+					</select>
+					
+					<select name="board_tel" class="txtbox Wid19 mWid70" onchange="fnc_tel_change(this.value);">
+					<option value="">::전화::</option>	
+  	
+			<option value="신청안함N">신청안함</option>
+  	
+			<option value="일반(유선)전화 - 신규가입N">일반(유선)전화 - 신규가입</option>
+  	
+			<option value="일반(유선)전화 - 번호이동Y">일반(유선)전화 - 번호이동</option>
+  	
+			<option value="WiFi(무선)전화 - 신규가입N">WiFi(무선)전화 - 신규가입</option>
+  	
+			<option value="WiFi(무선)전화 - 번호이동Y">WiFi(무선)전화 - 번호이동</option>
+  
+					</select>
+
+					<select name="board_settop" class="txtbox Wid19 mWid70">
+					<option value="">::셋탑박스 ::</option>	
+  	
+			<option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
+  	
+			<option value="UHD(HDR)셋탑">UHD(HDR)셋탑</option>
+  	
+			<option value="NUGU셋탑">NUGU셋탑</option>
+  
+					</select>
+					<select name="board_wifi" class="txtbox Wid19 mWid70">
+					<option value="">::와이파이 ::</option>	
+  	
+			<option value="신청안함(기존 공유기 사용)">신청안함(기존 공유기 사용)</option>
+  	
+			<option value="신청">신청</option>
+  
+					</select>
+			</td>
+			</tr>
+			<tr>
+			  <td class="tdFirst">약정 선택</td>
+			  <td>
+				<!--&nbsp; 
+				<input type="radio" name="g_code_promise" value="1년약정"> 1년 약정 &nbsp; 
+				<input type="radio" name="g_code_promise" value="2년약정"> 2년 약정 &nbsp; 
+				-->
+				<input type="radio" name="g_code_promise" value="3년약정" checked=""> 3년 약정 &nbsp; 
+				</td>
+			</tr>
+
+
+
+		<tr id="style_view_01" style="display: none;">
+			<td class="tdFirst"> 기존통신사 </td>
+			<td> <select name="g_move_company" class="txtbox Wid19 mWid70">
+				<option value="">:: 선택 :: </option>
+				<option value="SK">SK</option>
+				<option value="LG">LG </option>
+				<option value="KT">KT</option>
+				<option value="알뜰폰">기타</option>
+				</select></td>
+		</tr>
+		<tr id="style_view_02" style="display: none;">
+			<td class="tdFirst"> 기존 전화번호 </td>
+			<td> <input type="text" name="g_move_tel1" class="txtbox Wid20 mWid90"></td>
+		</tr>
+		<tr id="style_view_03" style="display: none;">
+			<td class="tdFirst"> 번호이동 인증</td>
+			<td>
+				<select name="g_move_auth" class="txtbox Wid20 mWid70">
+				<option value="">:: 선택 :: </option>
+				<option value="계좌번호 뒤 네자리">계좌번호 뒤 네자리</option>
+				<option value="지로납부 뒤 네자리">지로납부 </option>
+				<option value="카드번호 뒤 네자리">카드번호 뒤 네자리</option>
+				</select>
+				<input type="text" name="g_move_no" class="txtbox Wid10 mWid20">
+			</td>
+			
+		</tr>
+
+		</tbody>
+		</table>
+
+
+
+
+
+        <p class="appliTit"><img src="/images/icon_check02.gif">요청사항</p>
+        <table cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="tdFirst">요청사항 </td>
+                    <td><textarea name="g_bigo" rows="3" class="txtbox" style="width:99%;"></textarea></td>
+                </tr>
+            </tbody>
+		</table>
+
+       <p class="appliTit"><img src="/images/icon_check.gif">가입약관</p>
+        
+
+
+		<div class="board_agree" name="board_agree">
+				<p>
+						본 신청서는 신청자(가입자, 납입자)가 직접 작성하였고, <br>
+						신청자는 가입자 본인으로 본 신청서에 기재된 통장이체 또는 카드이체를 해당은행 CMS 신청에 동의합니다.<br>
+						또한 신청서 작성전 본 광고에 기재된 통신상품의 제반안내에 관하여 충분히 이해하였으며, <br>
+						신청자가 신청한 개인정보를 영업자가 대행하여 해당 본사에 대행 접수하는 것에 동의합니다.<br>
+						<br>
+						※ 하단 개인정보 수집 동의 내용을 꼭 읽어보신 후 동의체크후 신청 바랍니다.<br>
+						<br>
+						* * 가입 유의 사항 * *<br>
+						<span style="color: red; font-weight: bold;">1. 설치비는 전액 고객님 부담입니다.</span><br>
+						<span style="color: red; font-weight: bold;">2. 인터넷설치비=35,200원 익월 한 번 청구됩니다.</span><br>
+						<!-- &nbsp;&nbsp;(부득이하게 변경은 개통 익월부터 하셔야 합니다)</span></p> -->
+						<span style="color: red; font-weight: bold;">3. 기존에 사용하시던 인터넷은 꼭 설치받으신 뒤 직접 해지 해주셔야 합니다.</span><br>
+						<span style="color: red; font-weight: bold;">4. 모든 상품은 3년 약정기준이며, 재가입 및 1년이내 모든해지(위면해지,직권해지포함) 및 정지,변경시 현금사은품은 영업점으로 반환처리 됩니다.</span><br>
+						<span style="color: red; font-weight: bold;">5. 약정기간내 해지시 위약금 및 할인반환금(할인혜택, 세트할인, 장비할인)이 발생됩니다.</span><br>
+						<span style="color: red; font-weight: bold;">6. 동일장소,동일통신사 6개월이내 해지이력 있을시, 대표자 또는 가족구성원 가족결합 및 신규는 가입이 불가능하며 가입시 사은품은 전액 반환처리 됩니다.</span><br>
+						<br>
+						* 본 광고의 사은품 환수기준과 이후 약정내 해지시 본사위약금 청구기준에 동의합니다.<br>
+						* 본 신청상품의 개인정보동의사항과 자동이체 신청 및 신청서 대행작성에 동의합니다.<br>
+						<br>
+						당사는 개인정보취급방침을 통하여 귀하께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며<br>
+						개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.<br>
+						<br>
+						<span style="color: blue; font-weight: bold;">[개인정보 수집 동의서]</span><br>
+						<br>
+						당사는 이용자 확인, 문의상담 등의 목적으로써 귀하에게 최적의 서비스를 제공하기 위한 목적으로 귀하의 개인정보를 수집·이용하고 있습니다.<br>
+						수집하는 개인정보 항목에 따른 구체적인 수집목적 및 이용목적은 다음과 같습니다.<br>
+						<br>
+						1. 수집 및 이용, 제공정보:<br>
+						&nbsp;&nbsp; - 성명, 생년월일, 휴대폰번호, 이메일, 주소, 자동이체 및 사은품 계좌관련정보, 첨부파일 및 기타<br>
+						2. 수집목적: 본인인증, 접수내용 확인 서비스 제공<br>
+						3. 원활한 서비스 가입, 이용상 필요하므로 미동의시 서비스 가입, 이용에 제약이 있을 수 있습니다.<br>
+						4. 가입자 본인을 확인하기 위한 절차로본인인증이 필수 입니다. 타인명의를 도용할 경우 사문서위조(형법 제23조)등 관련 법률에 의거하여 처벌을 받을 수 있습니다.<br>
+						5. 신청상품의 유치대리점에서 고객식별, 본인확인, 서비스 가용확인, 서비스 제공매체결정, 고객상담, 유치, 상품소개, 기타 고객커뮤니케이션 등으로 활용되며, 서비스 이용을 원치 않을 경우 삭제요청이 가능합니다.<br>
+					</p>
+</div>
+
+		<input type="checkbox" name="w_agree" value="Y"><b> 위 약관에 동의합니다.</b>
+
+		<p class="appliBtBtn" onclick="fnc_custom_regist('frm_regist');" style="cursor:pointer;"><span>가입신청하기</span></p>
+
+
+	</div>
+</div>
+</form>
+
+
+</body></html>

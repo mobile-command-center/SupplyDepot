@@ -4,7 +4,8 @@
   "description": "가입 신청 페이지 이다.",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=development rollup --config ./config/rollup/rollup.config.js && print-sizes ./public"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "print-sizes": "0.0.4",
     "rimraf": "^2.6.3",
     "rollup": "^1.9.0",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-typescript2": "^0.20.1",
     "sinon": "^7.3.1",
     "sinon-chai": "^3.3.0",

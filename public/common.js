@@ -245,7 +245,7 @@ function fnc_custom_regist(form_name)
 
 
 
-	if(frm.g_give_type[0].checked==true)
+	if(frm.g_payment_method[0].checked==true)
 	{
 		if(frm.g_bank_cd.value=="0")
 		{
@@ -259,10 +259,10 @@ function fnc_custom_regist(form_name)
 			frm.g_bank_no.focus();
 			return;
 		}
-		if(frm.g_bank_name.value=="")
+		if(frm.g_bank_holder.value=="")
 		{
 			alert("예금주명을 입력해 주세요!");
-			frm.g_bank_name.focus();
+			frm.g_bank_holder.focus();
 			return;
 		}
 
@@ -281,10 +281,10 @@ function fnc_custom_regist(form_name)
 		frm.g_sp_bank_acount.focus();
 		return;
 	}
-	if(frm.g_sp_bank_name.value=="")
+	if(frm.g_sp_bank_holder.value=="")
 	{
 		alert("예금주명을 입력해 주세요!");
-		frm.g_sp_bank_name.focus();
+		frm.g_sp_bank_holder.focus();
 		return;
 	}
 
@@ -336,7 +336,7 @@ function fnc_custom_regist(form_name)
 		return;
 	}
 
-	if(frm.board_move_chk.value=="Y")
+	if(frm.telephone_carrier_move_chk.value=='true')
 	{
 		if(frm.g_move_company.value=="")
 		{
@@ -383,7 +383,6 @@ function fnc_custom_regist(form_name)
 function event_style_view(form_name,chk)	
 {
 	var frm = document.getElementById(form_name);
-	
 		
 	if(chk=="A")
 	{
@@ -396,7 +395,7 @@ function event_style_view(form_name,chk)
 
 
 
-		if(frm.g_give_type[0].checked==true)
+		if(frm.g_payment_method[0].checked==true)
 		{
 			document.getElementById("style_view_10").style.display = "block";	
 			document.getElementById("style_view_10").style.display = "";	
@@ -409,7 +408,7 @@ function event_style_view(form_name,chk)
 
 		}
 
-		if(frm.g_give_type[1].checked==true)
+		if(frm.g_payment_method[1].checked==true)
 		{
 			document.getElementById("style_view_13").style.display = "block";	
 			document.getElementById("style_view_13").style.display = "";	
@@ -430,7 +429,8 @@ function event_style_view(form_name,chk)
 		document.getElementById("style_view_03").style.display = "none";
 
 
-		if(frm.board_move_chk.value=="Y")
+		debugger;
+		if(frm.telephone_carrier_move_chk.value=='true')
 		{
 			document.getElementById("style_view_01").style.display = "block";	
 			document.getElementById("style_view_01").style.display = "";	
@@ -454,12 +454,12 @@ function g_custom_copy(form_name,chk)
 
 	if(chk.checked==true)
 	{
-		frm.g_bank_name.value=frm.c_name.value;
-		frm.g_card_name.value=frm.c_name.value;
+		frm.g_bank_holder.value=frm.c_name.value;
+		frm.g_card_holder.value=frm.c_name.value;
 	}
 	else
 	{
-		frm.g_bank_name.value="";
+		frm.g_bank_holder.value="";
 		frm.g_bank_jumin1.value="";
 	}
 }
@@ -524,14 +524,14 @@ function g_sp_bank_copy(form_name,chk)
 		}
 
 		frm.g_sp_bank_acount.value=frm.g_bank_no.value;
-		frm.g_sp_bank_name.value=frm.g_bank_name.value;
+		frm.g_sp_bank_holder.value=frm.g_bank_holder.value;
 	}
 	else
 	{
 		//사은품 정보를 지운다.
 		frm.g_sp_bank_code.options[0].selected=true;
 		frm.g_sp_bank_acount.value="";
-		frm.g_sp_bank_name.value="";
+		frm.g_sp_bank_holder.value="";
 	}
 }
 

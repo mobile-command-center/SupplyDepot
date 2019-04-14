@@ -30,7 +30,7 @@
         
             var iLen = String(Value).length;
             Value	= String(Value).substring(iLen, iLen - 1);
-            frm.telephone_carrier_move_chk.value = Value;
+            frm.telephone_carrier_move_chk.value = (Value === 'Y') ? true: false;
             
             event_style_view('frm_regist','B');
         }

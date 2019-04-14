@@ -429,7 +429,6 @@ function event_style_view(form_name,chk)
 		document.getElementById("style_view_03").style.display = "none";
 
 
-		debugger;
 		if(frm.telephone_carrier_move_chk.value=='true')
 		{
 			document.getElementById("style_view_01").style.display = "block";	

@@ -27,7 +27,7 @@
     
         var iLen = String(Value).length;
         Value	= String(Value).substring(iLen, iLen - 1);
-        frm.board_move_chk.value = Value;
+        frm.telephone_carrier_move_chk.value = (Value === 'Y') ? true: false;
         
         event_style_view('frm_regist','B');
     }
@@ -38,12 +38,8 @@
     </head><body>
     
     <form id="frm_regist" name="frm_regist" action="regist_ok.asp" enctype="MULTIPART/FORM-DATA" method="POST"> 
-    <input type="hidden" name="m_id" value="pengtong">
-    <input type="hidden" name="com_chk" value="KT">
-    <input type="hidden" name="board_move_chk" value="">
-    <input type="hidden" name="g_article_idx1" value="739">
-    
-    
+    <input type="hidden" name="mobile_carrier" value="KT">
+    <input type="hidden" name="telephone_carrier_move_chk" value="">
     
     <div id="application">
     
@@ -90,8 +86,8 @@
     
                     <select name="g_auth" class="txtbox">
                     <option value="">::본인여부::</option>
-                    <option value="본인">본인</option>
-                    <option value="본인아님">본인아님</option>
+                    <option value="true">본인</option>
+                    <option value="false">본인아님</option>
                     </select>
                     </td>
                 </tr>
@@ -157,8 +153,8 @@
                     <tr>
                         <td class="tdFirst">납부 정보 </td>
                         <td>
-                            <input type="radio" name="g_give_type" value="A" onclick="event_style_view('frm_regist','A');" checked="">계좌이체&nbsp;
-                            <input type="radio" name="g_give_type" value="B" onclick="event_style_view('frm_regist','A');">카드납부
+                            <input type="radio" name="g_payment_method" value="계좌이체" onclick="event_style_view('frm_regist','A');" checked="">계좌이체&nbsp;
+                            <input type="radio" name="g_payment_method" value="카드" onclick="event_style_view('frm_regist','A');">카드납부
                         </td>
                     </tr>
                     <tr id="style_view_10" style="">
@@ -293,7 +289,7 @@
                     </tr>
                     <tr id="style_view_12" style="">
                       <td class="tdFirst">예금주</td>
-                      <td><input type="text" name="g_bank_name" value="" class="txtbox Wid30 mWid70"></td>
+                      <td><input type="text" name="g_bank_holder" value="" class="txtbox Wid30 mWid70"></td>
                     </tr>
     
                     <tr height="30" id="style_view_13" style="display: none;"> 
@@ -356,7 +352,7 @@
                     <tr height="30" id="style_view_15" style="display: none;">
                         <td class="tdFirst">카드주 명</td>
                         <td>
-                            <input type="text" name="g_card_name" class="txtbox Wid30 mWid70" size="15" maxlength="15"></td>
+                            <input type="text" name="g_card_holder" class="txtbox Wid30 mWid70" size="15" maxlength="15"></td>
                     </tr> 
     
                 </tbody>
@@ -503,7 +499,7 @@
                 <tr height="30">
                     <td class="tdFirst">※ 예 금 주 
                     </td><td>
-                        <input type="text" name="g_sp_bank_name" class="txtbox" value="" size="10" maxlength="10"></td>
+                        <input type="text" name="g_sp_bank_holder" class="txtbox" value="" size="10" maxlength="10"></td>
                 
                 </tr> 
             </tbody></table>
@@ -674,7 +670,7 @@
             </p>
     </div>
     
-            <input type="checkbox" name="w_agree" value="Y"><b> 위 약관에 동의합니다.</b>
+            <input type="checkbox" name="w_agree" value="true"><b> 위 약관에 동의합니다.</b>
     
             <p class="appliBtBtn" onclick="fnc_custom_regist('frm_regist');" style="cursor:pointer;"><span>가입신청하기</span></p>
     

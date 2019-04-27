@@ -62,3 +62,6 @@ typings/
 
 # rollup cache directory
 .rpt2_cache
+
+# Output of 'build'
+dist

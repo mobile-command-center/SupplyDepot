@@ -36,6 +36,22 @@ function fncOnlyNumber(objtext1)
 	return true;
 }
 
+function fncCheckSecurityNumber() {
+	var jumin1 = document.getElementById('c_jumin1');
+	var jumin2 = document.getElementById('c_jumin2');
+	var securityNumber = jumin1.value.split('').concat(jumin2.value.split(''));
+
+	if(jumin2.value === '') {
+		return;
+	}
+
+	//유효성 체크
+	if(!Jumin_chk(securityNumber)) {
+		jumin2.value = '';
+		alert('잘못된 주민등록 번호 입니다.');
+	}
+}
+
 // 글자수만큼 자동 다음포커스 이동 (onKeyup)
 function fncNextFocus(obj, limitLength, form_name, nextcol) 
 {
@@ -95,36 +111,18 @@ function EnterNextFocus(form_name,nextcol)
 	}
 }  
 
-
-
-
 // 주민등록번호 체크
-function Jumin_chk(it)
+function Jumin_chk(securityNumber)
 {
-	idtot=0;
-	idadd="234567892345";
+	var compare = [2,3,4,5,6,7,8,9,2,3,4,5];
 
-	for(i=0;i<12;i++) 
-	{
-		idtot=idtot+parseInt(it.substring(i,i+1))*parseInt(idadd.substring(i,i+1));
-	}
-	idtot=11-(idtot%11);
+	var N = compare.reduce(function(acc, val, idx) {
+		return acc += parseInt(securityNumber[idx], 10) * val;
+	}, 0);
 
-	if (idtot==10)  idtot=0
-	if (idtot==11)  idtot=1
-	if (idtot==12)  idtot=2
-	if (idtot==13)  idtot=3
-	if (idtot==14)  idtot=4
-	if (idtot==15)  idtot=5
-	if (idtot==16)  idtot=6
-	if (idtot==17)  idtot=7
-	if (idtot==18)  idtot=8
-	if (idtot==19)  idtot=9
+	var lastSecurityNumber = parseInt(securityNumber[securityNumber.length - 1], 10);
 
-	if((it.substring(12,13))==idtot) 
-	{ return true; }
-	else 
-	{ return false;} 
+	return (lastSecurityNumber === 11 - (N % 11));
 }
 
 
@@ -186,11 +184,16 @@ function sample4_execDaumPostcode(Target1, Target2, Target3) {
 }
 
 
-
 function fnc_custom_regist(form_name)
 {
 	var frm = document.getElementById(form_name);
-	
+
+	if(frm.c_jumin2.value=="")
+	{
+		alert("주민등록번호를 입력해 주세요!");
+		frm.c_jumin2.focus();
+		return;
+	}
 	
 	if(frm.c_name.value=="")
 	{

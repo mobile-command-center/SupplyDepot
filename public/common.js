@@ -271,33 +271,29 @@ function fnc_custom_regist(form_name)
 
 	}
 
-	if(frm.g_sp_method[0].checked) {
-		if(frm.g_sp_gitcard_code.value==="0") {
-			alert("사은품 상품권 종류를 선택해 주세요!");
-			frm.g_sp_gitcard_code.focus();
-			return;
-		}
+	if(frm.g_sp_gitcard_code.value==="0") {
+		alert("사은품 상품권 종류를 선택해 주세요!");
+		frm.g_sp_gitcard_code.focus();
+		return;
 	}
 
-	if(frm.g_sp_method[1].checked) {
-		if(frm.g_sp_bank_code.value=="0")
-		{
-			alert("사은품 은행을 선택해 주세요!");
-			frm.g_sp_bank_code.focus();
-			return;
-		}
-		if(frm.g_sp_bank_acount.value=="")
-		{
-			alert("사은품 계좌번호를 입력해 주세요");
-			frm.g_sp_bank_acount.focus();
-			return;
-		}
-		if(frm.g_sp_bank_holder.value=="")
-		{
-			alert("예금주명을 입력해 주세요!");
-			frm.g_sp_bank_holder.focus();
-			return;
-		}
+	if(frm.g_sp_bank_code.value=="0")
+	{
+		alert("사은품 은행을 선택해 주세요!");
+		frm.g_sp_bank_code.focus();
+		return;
+	}
+	if(frm.g_sp_bank_acount.value=="")
+	{
+		alert("사은품 계좌번호를 입력해 주세요");
+		frm.g_sp_bank_acount.focus();
+		return;
+	}
+	if(frm.g_sp_bank_holder.value=="")
+	{
+		alert("예금주명을 입력해 주세요!");
+		frm.g_sp_bank_holder.focus();
+		return;
 	}
 
 	if(frm.board_internet.value=="")
@@ -441,29 +437,6 @@ function event_style_view(form_name,chk)
 			document.getElementById("style_view_03").style.display = "block";	
 			document.getElementById("style_view_03").style.display = "";	
 		}	
-	}
-
-	if(chk=="C")
-	{
-		document.getElementById("style_view_16").style.display = "none";
-		document.getElementById("style_view_17").style.display = "none";
-		document.getElementById("style_view_18").style.display = "none";
-		document.getElementById("style_view_19").style.display = "none";
-		document.getElementById("style_view_20").style.display = "block";
-		document.getElementById("style_view_20").style.display = "";
-	}
-
-	if(chk=="D")
-	{
-		document.getElementById("style_view_16").style.display = "block";
-		document.getElementById("style_view_16").style.display = "";
-		document.getElementById("style_view_17").style.display = "block";
-		document.getElementById("style_view_17").style.display = "";
-		document.getElementById("style_view_18").style.display = "block";
-		document.getElementById("style_view_18").style.display = "";
-		document.getElementById("style_view_19").style.display = "block";
-		document.getElementById("style_view_19").style.display = "";
-		document.getElementById("style_view_20").style.display = "none";
 	}
 }
 

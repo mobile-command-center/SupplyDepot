@@ -357,149 +357,164 @@
                 </table>
         
         
-                <div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">사은품 계좌
-                    </p><p class="appliInfo"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_sp_bank_copy('frm_regist',this);"> 위 정보와 같음 </p>
+                <div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">사은품
+			        </p><p id="style_view_16" class="appliInfo" style="display: none;"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_sp_bank_copy('frm_regist',this);"> 위 정보와 같음 </p>
                 </div>
                 
                 <table cellpadding="0" cellspacing="0">
-                <tbody>
-                    <tr>
-                        <td class="tdFirst">사은품 계좌 </td>
-                        <td>
-                            <select name="g_sp_bank_code" class="txtbox Wid30 mWid70">
-                            <option value="0"> 지급은행 
-                                
-                            </option><option value="23">경남은행</option>
-                                
-                            <option value="14">광주은행</option>
-                                
-                            <option value="42">교보증권</option>
-                                
-                            <option value="5">국민은행</option>
-                                
-                            <option value="3">기업은행</option>
-                                
-                            <option value="8">농협</option>
-                                
-                            <option value="20">대구은행</option>
-                                
-                            <option value="45">대신증권</option>
-                                
-                            <option value="29">대우증권</option>
-                                
-                            <option value="54">도이치뱅크</option>
-                                
-                            <option value="46">동부증권</option>
-                                
-                            <option value="56">동양종합금융증권</option>
-                                
-                            <option value="39">메리츠증권</option>
-                                
-                            <option value="28">미래에셋증권</option>
-                                
-                            <option value="57">미쓰비시도쿄UFJ</option>
-                                
-                            <option value="55">뱅크오브아메리카</option>
-                                
-                            <option value="44">부국증권</option>
-                                
-                            <option value="21">부산은행</option>
-                                
-                            <option value="43">산림조합</option>
-                                
-                            <option value="2">산업은행</option>
-                                
-                            <option value="30">삼성증권</option>
-                                
-                            <option value="15">새마을금고</option>
-                                
-                            <option value="12">서울은행</option>
-                                
-                            <option value="48">솔로몬투자증권</option>
-                                
-                            <option value="6">수협중앙회</option>
-                                
-                            <option value="25">스위스 저축은행</option>
-                                
-                            <option value="41">신영증권</option>
-                                
-                            <option value="38">신한금융투자</option>
-                                
-                            <option value="13">신한은행</option>
-                                
-                            <option value="16">신협</option>
-                                
-                            <option value="22">씨티은행</option>
-                                
-                            <option value="35">에스케이증권</option>
-                                
-                            <option value="34">에이치엠씨증권</option>
-                                
-                            <option value="4">외환은행</option>
-                                
-                            <option value="9">우리은행</option>
-                                
-                            <option value="32">우리투자증권</option>
-                                
-                            <option value="18">우체국</option>
-                                
-                            <option value="40">유진투자증권</option>
-                                
-                            <option value="47">이트레이드증권</option>
-                                
-                            <option value="19">전북은행</option>
-                                
-                            <option value="11">제일은행</option>
-                                
-                            <option value="24">제주은행</option>
-                                
-                            <option value="10">조흥은행</option>
-                                
-                            <option value="26">축협</option>
-                                
-                            <option value="58">카카오뱅크</option>
-                                
-                            <option value="59">케이뱅크</option>
-                                
-                            <option value="51">키움증권</option>
-                                
-                            <option value="37">하나대투증권</option>
-                                
-                            <option value="17">하나은행</option>
-                                
-                            <option value="33">하이투자증권</option>
-                                
-                            <option value="7">한국수출입은행</option>
-                                
-                            <option value="1">한국은행</option>
-                                
-                            <option value="31">한국투자증권</option>
-                                
-                            <option value="36">한화증권</option>
-                                
-                            <option value="27">현대증권</option>
-                                
-                            <option value="52">HSBC</option>
-                                
-                            <option value="53">JP 모간</option>
-                                
-                            <option value="50">LIG투자증권</option>
-                                
-                            <option value="49">NH투자증권</option>
-                            
-                            </select></td>
-                    </tr>
-                    <tr>
-                        <td class="tdFirst">※계좌번호 </td>
-                        <td>
-                            <input type="text" name="g_sp_bank_acount" class="txtbox  Wid30 mWid70" value="" size="25" maxlength="30" style="ime-mode:disabled;" onkeyup="fncOnlyNum(this); fncReplaceCheck(this,'.'); fncReplaceCheck(this,',');"></td>
-                    </tr>
-                    <tr height="30">
-                        <td class="tdFirst">※ 예 금 주 
-                        </td><td>
-                            <input type="text" name="g_sp_bank_holder" class="txtbox" value="" size="10" maxlength="10"></td>
-                    
-                    </tr> 
+                    <tbody>
+                        <tr>
+                            <td class="tdFirst">사은품</td>
+                            <td>
+                                <input type="radio" name="g_sp_method" value="상품권" onclick="event_style_view('frm_regist','C');" checked="">상품권&nbsp;
+                                <input type="radio" name="g_sp_method" value="현금" onclick="event_style_view('frm_regist','D');">현금
+                            </td>
+                        </tr>
+                        <tr id="style_view_17" style="display: none;">
+                                <td class="tdFirst">지급은행</td>
+                                <td>
+                                <select name="g_sp_bank_code" class="txtbox Wid30 mWid70">
+                                <option value="0">::지급은행::</option>
+                                <option value="23">경남은행</option>
+                                    
+                                <option value="14">광주은행</option>
+                                    
+                                <option value="42">교보증권</option>
+                                    
+                                <option value="5">국민은행</option>
+                                    
+                                <option value="3">기업은행</option>
+                                    
+                                <option value="8">농협</option>
+                                    
+                                <option value="20">대구은행</option>
+                                    
+                                <option value="45">대신증권</option>
+                                    
+                                <option value="29">대우증권</option>
+                                    
+                                <option value="54">도이치뱅크</option>
+                                    
+                                <option value="46">동부증권</option>
+                                    
+                                <option value="56">동양종합금융증권</option>
+                                    
+                                <option value="39">메리츠증권</option>
+                                    
+                                <option value="28">미래에셋증권</option>
+                                    
+                                <option value="57">미쓰비시도쿄UFJ</option>
+                                    
+                                <option value="55">뱅크오브아메리카</option>
+                                    
+                                <option value="44">부국증권</option>
+                                    
+                                <option value="21">부산은행</option>
+                                    
+                                <option value="43">산림조합</option>
+                                    
+                                <option value="2">산업은행</option>
+                                    
+                                <option value="30">삼성증권</option>
+                                    
+                                <option value="15">새마을금고</option>
+                                    
+                                <option value="12">서울은행</option>
+                                    
+                                <option value="48">솔로몬투자증권</option>
+                                    
+                                <option value="6">수협중앙회</option>
+                                    
+                                <option value="25">스위스 저축은행</option>
+                                    
+                                <option value="41">신영증권</option>
+                                    
+                                <option value="38">신한금융투자</option>
+                                    
+                                <option value="13">신한은행</option>
+                                    
+                                <option value="16">신협</option>
+                                    
+                                <option value="22">씨티은행</option>
+                                    
+                                <option value="35">에스케이증권</option>
+                                    
+                                <option value="34">에이치엠씨증권</option>
+                                    
+                                <option value="4">외환은행</option>
+                                    
+                                <option value="9">우리은행</option>
+                                    
+                                <option value="32">우리투자증권</option>
+                                    
+                                <option value="18">우체국</option>
+                                    
+                                <option value="40">유진투자증권</option>
+                                    
+                                <option value="47">이트레이드증권</option>
+                                    
+                                <option value="19">전북은행</option>
+                                    
+                                <option value="11">제일은행</option>
+                                    
+                                <option value="24">제주은행</option>
+                                    
+                                <option value="10">조흥은행</option>
+                                    
+                                <option value="26">축협</option>
+                                    
+                                <option value="58">카카오뱅크</option>
+                                    
+                                <option value="59">케이뱅크</option>
+                                    
+                                <option value="51">키움증권</option>
+                                    
+                                <option value="37">하나대투증권</option>
+                                    
+                                <option value="17">하나은행</option>
+                                    
+                                <option value="33">하이투자증권</option>
+                                    
+                                <option value="7">한국수출입은행</option>
+                                    
+                                <option value="1">한국은행</option>
+                                    
+                                <option value="31">한국투자증권</option>
+                                    
+                                <option value="36">한화증권</option>
+                                    
+                                <option value="27">현대증권</option>
+                                    
+                                <option value="52">HSBC</option>
+                                    
+                                <option value="53">JP 모간</option>
+                                    
+                                <option value="50">LIG투자증권</option>
+                                    
+                                <option value="49">NH투자증권</option>
+                                 
+                                </select></td>
+                        </tr>
+                        <tr id="style_view_18" style="display: none;">
+                            <td class="tdFirst">※계좌번호 </td>
+                            <td>
+                                <input type="text" name="g_sp_bank_acount" class="txtbox  Wid30 mWid70" value="" size="25" maxlength="30" style="ime-mode:disabled;" onkeyup="fncOnlyNum(this); fncReplaceCheck(this,'.'); fncReplaceCheck(this,',');"></td>
+                        </tr>
+                        <tr id="style_view_19" height="30" style="display: none;">
+                            <td class="tdFirst">※ 예 금 주 
+                            </td><td>
+                                <input type="text" name="g_sp_bank_holder" class="txtbox" value="" size="10" maxlength="10"></td>
+                        </tr>
+                        <tr id="style_view_20">
+                            <td class="tdFirst">종류</td>
+                            <td>
+                                <select name="g_sp_gitcard_code" class="txtbox Wid30 mWid70">
+                                        <option value="0">::상품권::</option>
+                                        <option value="1">신세계 상품권</option>
+                                        <option value="2">홈플러스 상품권</option>
+                                </select>
+                            </td>
+                        </tr>
                 </tbody></table>
         
         

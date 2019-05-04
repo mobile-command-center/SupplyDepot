@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  nginx:
+    container_name: supply-depot
+    build: .
+    image: supply-depot:1.0
+    ports:
+      - "80:80"
+      - "443:443"
+    networks: 
+      - ajungweb
+
+networks:
+  ajungweb:
+    name: ajungweb

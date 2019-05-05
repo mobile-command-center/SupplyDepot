@@ -122,7 +122,9 @@ function Jumin_chk(securityNumber)
 
 	var lastSecurityNumber = parseInt(securityNumber[securityNumber.length - 1], 10);
 
-	return (lastSecurityNumber === 11 - (N % 11));
+	var checkSum = (11 - (N % 11)) % 10;
+
+	return (lastSecurityNumber === checkSum);
 }
 
 

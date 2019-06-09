@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>:::::::가전 렌탈 가입센터:::::::</title>
+        <meta http-equiv="Content-Language" content="ko">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+        <link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        
+        <script language="JavaScript" src="./common.js"></script>
+        <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script><script charset="UTF-8" type="text/javascript" src="http://t1.daumcdn.net/postcode/api/core/190404/1554361093331/190404.js"></script>
+        
+        <script type="text/JavaScript">
+        <!--
+        window.onload	= function()
+        {
+            event_style_view('frm_regist','A');
+            event_style_view('frm_regist','B');
+        }
+        
+        function fnc_tel_change(Value)
+        {
+            var frm = document.getElementById("frm_regist");
+        
+            var iLen = String(Value).length;
+            Value	= String(Value).substring(iLen, iLen - 1);
+            frm.telephone_carrier_move_chk.value = (Value === 'Y') ? true: false;
+            
+            event_style_view('frm_regist','B');
+        }
+        -->
+        </script>
+    </head>
+    <body>
+        <form id="frm_regist" name="frm_regist" action="/barracks/v1/register" enctype="MULTIPART/FORM-DATA" method="POST"> 
+        <input type="hidden" name="vendor" value="LG">
+        <input type="hidden" name="telephone_carrier_move_chk" value="">
+        
+        <div id="application">
+        
+            <div class="appliTop">
+                <p class="appliTopTit">가전 렌탈 가입신청서<span>온라인 신청서를 작성하시면 선 예약접수가 되고 선 해피콜, 개통이 됩니다.</span></p>
+            </div>
+            
+        
+            <div class="appliForm">
+                    <p class="appliTit"><img src="/images/icon_check.gif">신청자 정보</p>
+        
+        
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td class="tdFirst">성명</td>
+                        <td>
+                            <input type="text" name="c_name" value="" class="txtbox Wid30 mWid70"></td>
+                    </tr>
+                    <tr>
+                    <td class="tdFirst">휴대폰</td>
+                    <td>
+                        <select name="c_tel2_type" class="txtbox  Wid15 mWid20">
+                        <option value="">::통신사:: </option>
+                        <option value="SK">SK</option>
+                        <option value="LG">LG </option>
+                        <option value="KT">KT</option>
+                        <option value="KT알뜰폰">KT알뜰폰</option>
+                        <option value="LG알뜰폰">LG알뜰폰</option>
+                        <option value="SK알뜰폰">SK알뜰폰</option>
+                        </select>
+                        
+                        <select name="c_tel21" class="txtbox Wid10 mWid20">
+                        <option value="010">010</option>
+                        <option value="010">011</option>
+                        <option value="010">016</option>
+                        <option value="010">017</option>
+                        <option value="010">019</option>
+                        </select>
+        
+                        <input type="text" name="c_tel22" class="txtbox Wid10 mWid20" maxlength="4">-<input type="text" name="c_tel23" class="txtbox Wid10 mWid20" maxlength="4">
+        
+                        <select name="g_auth" class="txtbox">
+                        <option value="">::본인여부::</option>
+                        <option value="true">본인</option>
+                        <option value="false">본인아님</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td class="tdFirst">제품 설치 주소</td>
+                    <td><p style="width:100%;">
+                        <input type="text" id="c_zipcode1" name="c_zipcode1" class="txtbox" value="" size="3" maxlength="3" style="ime-mode:disabled;width:40px;">-<input type="text" id="c_zipcode2" name="c_zipcode2" class="txtbox" value="" size="3" maxlength="3" style="width:40px;ime-mode:disabled;">
+                        <input type="text" id="c_address" name="c_address" class="txtbox Wid50 mWid70" value=""><span class="appliBtn" onclick="sample4_execDaumPostcode('c_zipcode1','c_zipcode2','c_address');" style="cursor:pointer;"><span>우편번호</span></span></p>
+                        <input type="text" id="c_address2" name="c_address2" class="txtbox Wid50 mWid70" value="" placeholder="상세 주소를 입력해 주세요">
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="tdFirst">생년월일</td>
+                    <td><input type="text" id="c_jumin1" name="c_jumin1" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="6" onkeyup="fncOnlyNumber(this);"></td>
+                    </tr>
+        
+                </tbody>
+                </table>
+        
+        
+                <p class="appliTit"><img src="/images/icon_check.gif">상품정보</p>
+                <table cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="tdFirst">가입 회사</td>
+                                <td>
+                                    <select name="g_sp_giftcard_code" class="txtbox Wid30 mWid70">
+                                            <option value="0">::상품권::</option>
+                                            <option value="1">신세계 상품권</option>
+                                            <option value="2">홈플러스 상품권</option>
+                                    </select>
+                                </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdFirst">가입 상품</td>
+                                <td>
+                                </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdFirst">약정 기간</td>
+                                <td>
+                                    <input type="radio" name="g_code_promise" value="3년약정" checked=""> 3년 약정 &nbsp; 
+                                </td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+        
+        
+        
+                <p class="appliTit"><img src="/images/icon_check02.gif">기타 요청 사항</p>
+                <table cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="tdFirst">요청사항 </td>
+                            <td><textarea name="g_bigo" rows="3" class="txtbox" style="width:99%;"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+            <p class="appliTit"><img src="/images/icon_check.gif">가입약관</p>
+            <div class="board_agree" name="board_agree">
+                <p>
+                    <span style="color: red; font-weight: bold;">1년 이내 해지시 사은품 환수 됩니다.</span><br>
+                </p>
+            </div>
+        
+            <input type="checkbox" name="w_agree" value="true"><b> 위 약관에 동의합니다.</b>
+            <p class="appliBtBtn" onclick="fnc_custom_regist('frm_regist');" style="cursor:pointer;"><span>가입신청하기</span></p>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>

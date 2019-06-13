@@ -12,27 +12,9 @@
         
         <script language="JavaScript" src="./common.js"></script>
         <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script><script charset="UTF-8" type="text/javascript" src="http://t1.daumcdn.net/postcode/api/core/190404/1554361093331/190404.js"></script>
-        
-        <script type="text/JavaScript">
-        <!--
-        function fnc_tel_change(Value)
-        {
-            var frm = document.getElementById("frm_regist");
-        
-            var iLen = String(Value).length;
-            Value	= String(Value).substring(iLen, iLen - 1);
-            frm.telephone_carrier_move_chk.value = (Value === 'Y') ? true: false;
-            
-            event_style_view('frm_regist','B');
-        }
-        -->
-        </script>
     </head>
     <body>
         <form id="frm_regist" name="frm_regist" action="/starport/v1/register" enctype="MULTIPART/FORM-DATA" method="POST"> 
-        <input type="hidden" name="vendor" value="LG">
-        <input type="hidden" name="telephone_carrier_move_chk" value="">
-        
         <div id="application">
         
             <div class="appliTop">
@@ -473,32 +455,32 @@
                         <tr>
                             <td class="tdFirst">가입 회사</td>
                                 <td>
-                                    <input type="radio" name="p_vendor" value="LG" checked=""> LG퓨리케어 &nbsp; 
-                                    <input type="radio" name="p_vendor" value="SK" checked=""> SK매직 &nbsp; 
-                                    <input type="radio" name="p_vendor" value="Coway" checked=""> 코웨이 &nbsp; 
-                                    <input type="radio" name="p_vendor" value="Etc" checked=""> 기타 &nbsp; 
-                                    <input type="text" id="p_vendor_etc" name="p_vendor" class="txtbox Wid10" value="">
+                                    <input type="radio" name="p_vendor" value="LG" checked="checked"> LG퓨리케어 &nbsp; 
+                                    <input type="radio" name="p_vendor" value="SK"> SK매직 &nbsp; 
+                                    <input type="radio" name="p_vendor" value="코웨이"> 코웨이 &nbsp; 
+                                    <input type="radio" name="p_vendor" value="기타"> 기타 &nbsp; 
+                                    <input type="text" id="p_vendor" name="p_vendor" class="txtbox Wid10" value="">
                                 </td>
                             </td>
                         </tr>
                         <tr>
                             <td class="tdFirst">가입 상품</td>
                                 <td>
-                                    <input type="checkbox" name="p_product" value="WaterPurifier"> 정수기 &nbsp;
-                                    <input type="checkbox" name="p_product" value="AirCleaner"> 공기청정기 &nbsp;
-                                    <input type="checkbox" name="p_product" value="Dryer"> 건조기 &nbsp;
-                                    <input type="checkbox" name="p_product" value="Etc"> 기타 &nbsp;
-                                    <input type="text" id="p_product_etc" name="p_product_etc" class="txtbox Wid10" value="">
+                                    <input type="checkbox" name="p_product" value="정수기"> 정수기 &nbsp;
+                                    <input type="checkbox" name="p_product" value="공기청정기"> 공기청정기 &nbsp;
+                                    <input type="checkbox" name="p_product" value="건조기"> 건조기 &nbsp;
+                                    <input type="checkbox" name="p_product" value="기타"> 기타 &nbsp;
+                                    <input type="text" id="p_product" name="p_product" class="txtbox Wid10" value="">
                                 </td>
                             </td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td class="tdFirst">모델명</td>
                                 <td>
                                         <input type="text" id="p_product_name" name="p_product_name" class="txtbox Wid50 mWid70" value="" placeholder="예시) (정수기)WD502AS, (건조기)RH16WC">
                                 </td>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td class="tdFirst">약정 기간</td>
                                 <td>

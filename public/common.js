@@ -190,7 +190,7 @@ function fnc_custom_regist(form_name)
 {
 	var frm = document.getElementById(form_name);
 
-	if(frm.c_jumin2.value=="")
+	if(frm.c_jumin2 && frm.c_jumin2.value=="")
 	{
 		alert("주민등록번호를 입력해 주세요!");
 		frm.c_jumin2.focus();
@@ -226,14 +226,14 @@ function fnc_custom_regist(form_name)
 		return;
 	}
 	
-	if(frm.c_email1.value=="")
+	if(frm.c_email1 && frm.c_email1.value=="")
 	{
 		alert("이메일 주소를 입력해 주세요!");
 		frm.c_email1.focus();
 		return;
 	}
 
-	if(frm.c_email2.value=="")
+	if(frm.c_email2 && frm.c_email2.value=="")
 	{
 		alert("이메일 주소를 입력해 주세요!");
 		frm.c_email2.focus();
@@ -298,14 +298,14 @@ function fnc_custom_regist(form_name)
 		return;
 	}
 
-	if(frm.board_internet.value=="")
+	if(frm.board_internet && frm.board_internet.value=="")
 	{
 		alert("인터넷 상품을 선택해 주세요!");
 		frm.board_internet.focus();
 		return;
 	}
 
-	if(frm.board_tv.value=="")
+	if(frm.board_tv && frm.board_tv.value=="")
 	{
 		alert("TV 상품을 선택해 주세요!");
 		frm.board_tv.focus();
@@ -313,7 +313,7 @@ function fnc_custom_regist(form_name)
 	}
 	
 
-	if(frm.board_tel.value=="")
+	if(frm.board_tel && frm.board_tel.value=="")
 	{
 		alert("전화 상품을 선택해 주세요!");
 		frm.board_tel.focus();
@@ -321,21 +321,21 @@ function fnc_custom_regist(form_name)
 	}
 	
 
-	if(frm.board_settop.value=="")
+	if(frm.board_settop && frm.board_settop.value=="")
 	{
 		alert("셋탑박스를 선택해 주세요!");
 		frm.board_settop.focus();
 		return;
 	}
 
-	if(frm.board_wifi.value=="")
+	if(frm.board_wifi && frm.board_wifi.value=="")
 	{
 		alert("와이파이를 선택해 주세요!");
 		frm.board_wifi.focus();
 		return;
 	}
 
-	if(frm.telephone_carrier_move_chk.value=='true')
+	if(frm.telephone_carrier_move_chk && frm.telephone_carrier_move_chk.value=='true')
 	{
 		if(frm.g_move_company.value=="")
 		{
@@ -367,6 +367,30 @@ function fnc_custom_regist(form_name)
 		}
 		
 
+	}
+
+	if(frm.p_vendor && frm.p_vendor.value=="")
+	{
+		alert("가입회사를 선택해 주세요!");
+		frm.p_vendor.focus();
+		return;
+	}
+
+	if(frm.p_product)
+	{
+		var checked = false;
+		
+		frm.p_product.forEach(function(itemBox) {
+			if(itemBox.checked) {
+				checked = true;
+			}	
+		});
+
+		if(!checked) {
+			alert("가입상품을 선택해 주세요!");
+			frm.p_product[0].focus();
+			return;
+		}
 	}
 
 
@@ -465,7 +489,7 @@ function g_custom_copy(form_name,chk)
 
 function fnc_consult_regist(form_name)
 {   	
-	var frm			= document.getElementById(form_name);
+	var frm	= document.getElementById(form_name);
 
    	if(frm.c_m_name.value=="")
    	{

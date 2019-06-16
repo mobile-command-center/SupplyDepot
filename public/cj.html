@@ -13,21 +13,15 @@
     
     <script type="text/JavaScript">
     <!--
-    window.onload	= function()
-    {
-        event_style_view('frm_regist','A');
-        event_style_view('frm_regist','B');
-    }
-    
-    function fnc_tel_change(Value)
-    {
-        var frm = document.getElementById("frm_regist");
-    
-        var iLen = String(Value).length;
-        Value	= String(Value).substring(iLen, iLen - 1);
-        frm.telephone_carrier_move_chk.value = (Value === 'Y') ? true: false;
-        
-        event_style_view('frm_regist','B');
+    function tvSelected() {
+        var selecteValue = document.getElementById("board_tv").value;
+        var frm = document.getElementById('frm_regist');
+
+        if(selecteValue === "직접기입") {
+            alert('원하는 TV 상품명을 요청사항에 기입해주세요');
+
+            frm.g_bigo.focus();
+        }
     }
     -->
     </script>
@@ -529,10 +523,11 @@
                             <option value="광랜(500M)">광랜(500M)</option>
                             <option value="기가(1기가)">기가(1기가)</option>
                         </select>
-                        <select name="board_tv" class="txtbox Wid19 mWid70">
+                        <select id="board_tv" name="board_tv" class="txtbox Wid19 mWid70" onchange="tvSelected()">
                             <option value="">::TV ::</option>	
                             <option value="베이직HD PVR">베이직HD PVR</option>
                             <option value="UHD Red 베이직">UHD Red 베이직</option>
+                            <option value="직접기입">직접 기입 (요청사항에 입력)</option>
                         </select>
                     </td>
                 </tr>
@@ -556,7 +551,7 @@
                 <tbody>
                     <tr>
                         <td class="tdFirst">요청사항 </td>
-                        <td><textarea name="g_bigo" rows="3" class="txtbox" style="width:99%;"></textarea></td>
+                        <td><textarea id="g_bigo" name="g_bigo" rows="3" class="txtbox" style="width:99%;"></textarea></td>
                     </tr>
                 </tbody>
             </table>

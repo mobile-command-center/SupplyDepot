@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>:::::::LG 가입센터:::::::</title>
+        <title>:::::::가전 렌탈 가입센터:::::::</title>
         <meta http-equiv="Content-Language" content="ko">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="robots" content="noindex, nofollow">
@@ -12,50 +12,24 @@
         
         <script language="JavaScript" src="./common.js"></script>
         <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script><script charset="UTF-8" type="text/javascript" src="http://t1.daumcdn.net/postcode/api/core/190404/1554361093331/190404.js"></script>
-        
-        <script type="text/JavaScript">
-        <!--
-        window.onload	= function()
-        {
-            event_style_view('frm_regist','A');
-            event_style_view('frm_regist','B');
-        }
-        
-        function fnc_tel_change(Value)
-        {
-            var frm = document.getElementById("frm_regist");
-        
-            var iLen = String(Value).length;
-            Value	= String(Value).substring(iLen, iLen - 1);
-            frm.telephone_carrier_move_chk.value = (Value === 'Y') ? true: false;
-            
-            event_style_view('frm_regist','B');
-        }
-        -->
-        </script>
     </head>
     <body>
-        <form id="frm_regist" name="frm_regist" action="https://wtoj0rio23.execute-api.us-west-2.amazonaws.com/dev/starport/v1/telecom" enctype="MULTIPART/FORM-DATA" method="POST" accept-charset="utf-8"> 
-        <input type="hidden" name="vendor" value="LG">
-        <input type="hidden" name="telephone_carrier_move_chk" value="">
-        
+        <form id="frm_regist" name="frm_regist" action="https://wtoj0rio23.execute-api.us-west-2.amazonaws.com/dev/starport/v1/rental" enctype="MULTIPART/FORM-DATA" method="POST" accept-charset="utf-8"> 
         <div id="application">
         
             <div class="appliTop">
-                <p class="appliLogo"><img src="/images/icon_lg.gif"></p>
-                <p class="appliTopTit">가입신청서<span>온라인 신청서를 작성하시면 선 예약접수가 되고 선 해피콜, 개통이 됩니다.</span></p>
-                <!--<p class="appliCall">대표번호<span>070-7711-8012</span></p>-->
+                <p class="appliTopTit">가전 렌탈 가입신청서<span>온라인 신청서를 작성하시면 선 예약접수가 되고 선 해피콜, 개통이 됩니다.</span></p>
             </div>
             
         
             <div class="appliForm">
-                    <p class="appliTit"><img src="/images/icon_check.gif">가입자정보</p>
+                    <p class="appliTit"><img src="/images/icon_check.gif">신청자 정보</p>
         
         
             <table cellpadding="0" cellspacing="0">
                 <tbody>
                     <tr>
-                        <td class="tdFirst">가입자명</td>
+                        <td class="tdFirst">성명</td>
                         <td>
                             <input type="text" name="c_name" value="" class="txtbox Wid30 mWid70"></td>
                     </tr>
@@ -82,47 +56,7 @@
         
                         <input type="text" name="c_tel22" class="txtbox Wid10 mWid20" maxlength="4">-<input type="text" name="c_tel23" class="txtbox Wid10 mWid20" maxlength="4">
         
-                        <select name="g_auth" class="txtbox">
-                        <option value="">::본인여부::</option>
-                        <option value="true">본인</option>
-                        <option value="false">본인아님</option>
-                        </select>
-                        </td>
-                    </tr>
-                    <tr>
-                    <td class="tdFirst">비상연락처</td>
-                    <td>
-                        <input type="text" name="c_tel11" class="txtbox Wid10 mWid20" style="ime-mode:disabled;" onkeyup="fncOnlyNum(this);">-<input type="text" name="c_tel12" class="txtbox Wid10 mWid20" maxlength="4" onkeyup="fncOnlyNum(this);">-<input type="text" name="c_tel13" class="txtbox Wid10 mWid20" maxlength="4" onkeyup="fncOnlyNum(this);">
-                        </td>
-                    </tr>
-                    <tr>
-                    <td class="tdFirst">이메일</td>
-                    <td>
-                            <input type="text" id="c_email1" name="c_email1" class="txtbox Wid20 mWid20">
-                            @
-                            <input type="text" id="c_email2" name="c_email2" readonly="true" class="txtbox Wid20 mWid30">
-                            
-                            <select name="emailCheck" onchange="SetEmailTail(emailCheck.options[this.selectedIndex].value)" class="txtbox Wid20 mWid20">
-                            <option value="notSelected">::선택하세요::</option>
-                            <option value="etc">직접입력</option>
-                            <option value="naver.com">naver.com</option>
-                            <option value="nate.com">nate.com</option>
-                            <option value="empal.com">empal.com</option>
-                            <option value="hotmail.com">hotmail.com</option>
-                            <option value="lycos.co.kr">lycos.co.kr</option>
-                            <option value="msn.com">msn.com</option>
-                            <option value="hanmail.net">hanmail.net</option>
-                            <option value="yahoo.com">yahoo.com</option>
-                            <option value="korea.com">korea.com</option>
-                            <option value="kornet.net">kornet.net</option>
-                            <option value="yahoo.co.kr">yahoo.co.kr</option>
-                            <option value="kebi.com">kebi.com</option>
-                            <option value="orgio.net">orgio.net</option>
-                            <option value="paran.com">paran.com</option>    
-                            <option value="gmail.com">gmail.com</option>
-                        </select>
-                        
-        
+                        <input type="checkbox" name="g_auth" value="true" checked="checked"> 본인 &nbsp;
                         </td>
                     </tr>
                     <tr>
@@ -134,15 +68,13 @@
                     </td>
                     </tr>
                     <tr>
-                    <td class="tdFirst">주민번호</td>
-                    <td><input type="text" id="c_jumin1" name="c_jumin1" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="6" onkeyup="fncOnlyNumber(this);">-<input type="password" id="c_jumin2" name="c_jumin2" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="7" onkeyup="fncOnlyNumber(this);" onblur="fncCheckSecurityNumber();"></td>
+                    <td class="tdFirst">생년월일</td>
+                    <td><input type="text" id="c_jumin1" name="c_jumin1" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="6" onkeyup="fncOnlyNumber(this);"></td>
                     </tr>
         
                 </tbody>
                 </table>
-        
-                
-        
+
                 <div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">납부자정보</p>
                     <p class="appliInfo"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_custom_copy('frm_regist',this);"> 위 정보와 같음 </p></div>
                 <table cellpadding="0" cellspacing="0">
@@ -514,125 +446,55 @@
                             </td><td>
                                 <input type="text" name="g_sp_bank_holder" class="txtbox" value="" size="10" maxlength="10"></td>
                         </tr>
-                </tbody></table>
-        
-        
+                    </tbody>
+                </table>
         
                 <p class="appliTit"><img src="/images/icon_check.gif">상품정보</p>
                 <table cellpadding="0" cellspacing="0">
-                <tbody>
-                    <tr>
-                        <td class="tdFirst">가입 상품 </td>
-                        <td>
-                            <select name="board_internet" class="txtbox Wid19 mWid70">
-                            <option value="">::인터넷::</option>	
-            
-                    <option value="와이파이기본_광랜안심(100M)">와이파이기본_광랜안심(100M)</option>
-            
-                    <option value="와이파이기본_기가슬림안심(500M)">와이파이기본_기가슬림안심(500M)</option>
-            
-                    <option value="와이파이기본_기가안심(1G)">와이파이기본_기가안심(1G)</option>
-        
-                            </select>
-                            <select name="board_tv" class="txtbox Wid19 mWid70">
-                            <option value="">::TV ::</option>	
-            
-                    <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
-            
-                    <option value="TV보급형 - 96채널">TV보급형 - 96채널</option>
-            
-                    <option value="TV베이직 - 183채널">TV베이직 - 183채널</option>
-            
-                    <option value="TV프리미엄 - 223채널">TV프리미엄 - 223채널</option>
-            
-                    <option value="TV VOD고급형 - 210채널">TV VOD고급형 - 210채널</option>
-            
-                    <option value="프리미엄 넷플릭스HD TV - 223채널">프리미엄 넷플릭스HD TV - 223채널</option>
-            
-                    <option value="프리미엄 넷플릭스UHD TV - 223채널">프리미엄 넷플릭스UHD TV - 223채널</option>
-        
-                            </select>
-                            
-                            <select name="board_tel" class="txtbox Wid19 mWid70" onchange="fnc_tel_change(this.value);">
-                            <option value="">::전화::</option>	
-            
-                    <option value="신청안함N">신청안함</option>
-            
-                    <option value="일반(유선)전화 - 신규가입N">일반(유선)전화 - 신규가입</option>
-            
-                    <option value="일반(유선)전화 - 번호이동Y">일반(유선)전화 - 번호이동</option>
-            
-                    <option value="WiFi(무선)전화 - 신규가입N">WiFi(무선)전화 - 신규가입</option>
-            
-                    <option value="WiFi(무선)전화 - 번호이동Y">WiFi(무선)전화 - 번호이동</option>
-        
-                            </select>
-        
-                            <select name="board_settop" class="txtbox Wid19 mWid70">
-                            <option value="">::셋탑박스 ::</option>	
-            
-                    <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
-            
-                    <option value="구글셋탑">구글셋탑</option>
-            
-                    <option value="UHD셋탑">UHD셋탑</option>
-        
-                            </select>
-                            <select name="board_wifi" class="txtbox Wid19 mWid70">
-                            <option value="">::와이파이 ::</option>	
-            
-                    <option value="신청">신청</option>
-        
-                            </select>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="tdFirst">약정 선택</td>
-                    <td>
-                        <!--&nbsp; 
-                        <input type="radio" name="g_code_promise" value="1년약정"> 1년 약정 &nbsp; 
-                        <input type="radio" name="g_code_promise" value="2년약정"> 2년 약정 &nbsp; 
-                        -->
-                        <input type="radio" name="g_code_promise" value="3년약정" checked=""> 3년 약정 &nbsp; 
-                        </td>
-                    </tr>
-        
-        
-        
-                <tr id="style_view_01" style="display: none;">
-                    <td class="tdFirst"> 기존통신사 </td>
-                    <td> <select name="g_move_company" class="txtbox Wid19 mWid70">
-                        <option value="">:: 선택 :: </option>
-                        <option value="SK">SK</option>
-                        <option value="LG">LG </option>
-                        <option value="KT">KT</option>
-                        <option value="알뜰폰">기타</option>
-                        </select></td>
-                </tr>
-                <tr id="style_view_02" style="display: none;">
-                    <td class="tdFirst"> 기존 전화번호 </td>
-                    <td> <input type="text" name="g_move_tel1" class="txtbox Wid20 mWid90"></td>
-                </tr>
-                <tr id="style_view_03" style="display: none;">
-                    <td class="tdFirst"> 번호이동 인증</td>
-                    <td>
-                        <select name="g_move_auth" class="txtbox Wid20 mWid70">
-                        <option value="">:: 선택 :: </option>
-                        <option value="계좌번호 뒤 네자리">계좌번호 뒤 네자리</option>
-                        <option value="지로납부 뒤 네자리">지로납부 </option>
-                        <option value="카드번호 뒤 네자리">카드번호 뒤 네자리</option>
-                        </select>
-                        <input type="text" name="g_move_no" class="txtbox Wid10 mWid20">
-                    </td>
-                    
-                </tr>
-        
-                </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="tdFirst">가입 회사</td>
+                                <td>
+                                    <input type="radio" name="p_vendor" value="LG" checked="checked"> LG퓨리케어 &nbsp; 
+                                    <input type="radio" name="p_vendor" value="SK"> SK매직 &nbsp; 
+                                    <input type="radio" name="p_vendor" value="코웨이"> 코웨이 &nbsp; 
+                                    <input type="radio" name="p_vendor" value="기타"> 기타 &nbsp; 
+                                    <input type="text" id="p_vendor" name="p_vendor" class="txtbox Wid10" value="">
+                                </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdFirst">가입 상품</td>
+                                <td>
+                                    <input type="checkbox" name="p_product" value="정수기"> 정수기 &nbsp;
+                                    <input type="checkbox" name="p_product" value="공기청정기"> 공기청정기 &nbsp;
+                                    <input type="checkbox" name="p_product" value="건조기"> 건조기 &nbsp;
+                                    <input type="checkbox" name="p_product" value="기타"> 기타 &nbsp;
+                                    <input type="text" id="p_product" name="p_product" class="txtbox Wid10" value="">
+                                </td>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td class="tdFirst">모델명</td>
+                                <td>
+                                        <input type="text" id="p_product_name" name="p_product_name" class="txtbox Wid50 mWid70" value="" placeholder="예시) (정수기)WD502AS, (건조기)RH16WC">
+                                </td>
+                            </td>
+                        </tr> -->
+                        <tr>
+                            <td class="tdFirst">약정 기간</td>
+                                <td>
+                                    <input type="radio" name="p_promise" value="3년약정" checked=""> 3년 약정 &nbsp; 
+                                </td>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
+                
         
         
         
-                <p class="appliTit"><img src="/images/icon_check02.gif">요청사항</p>
+                <p class="appliTit"><img src="/images/icon_check02.gif">기타 요청 사항</p>
                 <table cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -643,7 +505,8 @@
                 </table>
         
             <p class="appliTit"><img src="/images/icon_check.gif">가입약관</p>
-                <div class="board_agree" name="board_agree"><p>
+            <div class="board_agree" name="board_agree">
+                <p>
                     본 신청서는 신청자(가입자, 납입자)가 직접 작성하였고, <br>
                     신청자는 가입자 본인으로 본 신청서에 기재된 통장이체 또는 카드이체를 해당은행 CMS 신청에 동의합니다.<br>
                     또한 신청서 작성전 본 광고에 기재된 통신상품의 제반안내에 관하여 충분히 이해하였으며, <br>
@@ -653,12 +516,9 @@
                     <br>
                     * * 가입 유의 사항 * *<br>
                     <span style="color: red; font-weight: bold;">1. 설치비는 전액 고객님 부담입니다.</span><br>
-                    <span style="color: red; font-weight: bold;">2. 전화상으로 혹은 문자상으로 인터넷, TV 설치비는 익월 한 번 청구됩니다.</span><br>
-                    <!-- &nbsp;&nbsp;(부득이하게 변경은 개통 익월부터 하셔야 합니다)</span></p> -->
-                    <span style="color: red; font-weight: bold;">3. 기존에 사용하시던 인터넷은 꼭 설치받으신 뒤 직접 해지 해주셔야 합니다.</span><br>
-                    <span style="color: red; font-weight: bold;">4. 모든 상품은 3년 약정기준이며, 재가입 및 1년이내 모든해지(위면해지,직권해지포함) 및 정지,변경시 현금사은품은 영업점으로 반환처리 됩니다.</span><br>
-                    <span style="color: red; font-weight: bold;">5. 약정기간내 해지시 위약금 및 할인반환금(할인혜택, 세트할인, 장비할인)이 발생됩니다.</span><br>
-                    <span style="color: red; font-weight: bold;">6. 동일장소,동일통신사 6개월이내 해지이력 있을시, 대표자 또는 가족구성원 가족결합 및 신규는 가입이 불가능하며 가입시 사은품은 전액 반환처리 됩니다.</span><br>
+                    <span style="color: red; font-weight: bold;">2. 모든 상품은 3년 약정기준이며, 재가입 및 1년이내 모든해지(위면해지,직권해지포함) 및 정지,변경시 현금사은품은 영업점으로 반환처리 됩니다.</span><br>
+                    <span style="color: red; font-weight: bold;">3. 약정기간내 해지시 위약금 및 할인반환금(할인혜택, 세트할인, 장비할인)이 발생됩니다.</span><br>
+                    <span style="color: red; font-weight: bold;">4. 동일장소,동일통신사 6개월이내 해지이력 있을시, 대표자 또는 가족구성원 가족결합 및 신규는 가입이 불가능하며 가입시 사은품은 전액 반환처리 됩니다.</span><br>
                     <br>
                     * 본 광고의 사은품 환수기준과 이후 약정내 해지시 본사위약금 청구기준에 동의합니다.<br>
                     * 본 신청상품의 개인정보동의사항과 자동이체 신청 및 신청서 대행작성에 동의합니다.<br>
@@ -677,11 +537,11 @@
                     3. 원활한 서비스 가입, 이용상 필요하므로 미동의시 서비스 가입, 이용에 제약이 있을 수 있습니다.<br>
                     4. 가입자 본인을 확인하기 위한 절차로본인인증이 필수 입니다. 타인명의를 도용할 경우 사문서위조(형법 제23조)등 관련 법률에 의거하여 처벌을 받을 수 있습니다.<br>
                     5. 신청상품의 유치대리점에서 고객식별, 본인확인, 서비스 가용확인, 서비스 제공매체결정, 고객상담, 유치, 상품소개, 기타 고객커뮤니케이션 등으로 활용되며, 서비스 이용을 원치 않을 경우 삭제요청이 가능합니다.<br>
-                    </p>
-        </div>
+                </p>
+            </div>
         
-                <input type="checkbox" name="w_agree" value="true"><b> 위 약관에 동의합니다.</b>
-                <p class="appliBtBtn" onclick="fnc_custom_regist('frm_regist');" style="cursor:pointer;"><span>가입신청하기</span></p>
+            <input type="checkbox" name="w_agree" value="true"><b> 위 약관에 동의합니다.</b>
+            <p class="appliBtBtn" onclick="fnc_custom_regist('frm_regist');" style="cursor:pointer;"><span>가입신청하기</span></p>
             </div>
         </div>
         </form>

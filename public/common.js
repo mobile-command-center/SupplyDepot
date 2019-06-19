@@ -379,6 +379,14 @@ function fnc_custom_regist(form_name)
 	if(frm.p_product)
 	{
 		var checked = false;
+		var i=0;
+
+		for( i=0 ; i<frm.p_product.length; i++) {
+			if(frm.p_product[i].checked) {
+				checked = true;
+				break;
+			}
+		}
 		
 		frm.p_product.forEach(function(itemBox) {
 			if(itemBox.checked) {

@@ -401,6 +401,21 @@ function fnc_custom_regist(form_name)
 		}
 	}
 
+	if(frm.p_product_name) {
+		if(frm.p_product_name.value === "") {
+			alert("모델명을 입력해 주세요.");
+			frm.p_product_name.focus();
+			return;
+		}
+	}
+
+	if(frm.p_product_color) {
+		if(frm.p_product_color.value === "") {
+			alert("색상을 입력해 주세요.");
+			frm.p_product_color.focus();
+			return;
+		}
+	}
 
 	if(frm.w_agree.checked==false)
 	{

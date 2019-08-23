@@ -50,6 +50,8 @@ img { border:0px;vertical-align:top; }
 #application .appInfoBox {height: 100px; background-color: #F6F4E9; margin-bottom: 35px;}
 #application .appInfoBox .logo {width: 19%; margin-top: 10px; text-align: center; vertical-align: middle; float:left;}
 #application .appInfoBox .logo p {margin-top: 5px; font-weight:bold;}
+#application .appInfoBox .content {padding-top:20px;}
+#application .appInfoBox .content p {font-size: 14px;}
 
 #application .appliTitBox {position:relative;}
 #application .appliTitBox .appliInfo {position:absolute; top:32px; right:0;}

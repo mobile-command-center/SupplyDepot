@@ -525,65 +525,47 @@
                 <tr>
                     <td class="tdFirst">가입 상품 </td>
                     <td>
-                        <select name="board_internet" class="txtbox Wid19 mWid70">
-                        <option value="">::인터넷::</option>	
-          
-                <option value="올레인터넷(100M)">올레인터넷(100M)</option>
-          
-                <option value="기가인터넷 콤팩트(500M)">기가인터넷 콤팩트(500M)</option>
-          
-                <option value="기가인터넷(1G)">기가인터넷(1G)</option>
-      
-                        </select>
-                        <select name="board_tv" class="txtbox Wid19 mWid70">
-                        <option value="">::TV ::</option>	
-          
-                <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
-          
-                <option value="OTV슬림(구 OTV10) - 228채널">OTV슬림(구 OTV10) - 228채널</option>
-          
-                <option value="OTV라이트(구 OTV12) - 238채널">OTV라이트(구 OTV12) - 238채널</option>
-          
-                <option value="OTV에센스(구 OTV15) - 261채널">OTV에센스(구 OTV15) - 261채널</option>
-      
-                        </select>
-                        
-                        <select name="board_tel" class="txtbox Wid19 mWid70" onchange="fnc_tel_change(this.value);">
-                        <option value="">::전화::</option>	
-          
-                <option value="신청안함N">신청안함</option>
-          
-                <option value="일반(유선)전화 - 신규가입N">일반(유선)전화 - 신규가입</option>
-          
-                <option value="일반(유선)전화 - 번호이동Y">일반(유선)전화 - 번호이동</option>
-          
-                <option value="WiFi(무선)전화 - 신규가입N">WiFi(무선)전화 - 신규가입</option>
-          
-                <option value="WiFi(무선)전화 - 번호이동Y">WiFi(무선)전화 - 번호이동</option>
-      
-                        </select>
-    
-                        <select name="board_settop" class="txtbox Wid19 mWid70">
-                        <option value="">::셋탑박스 ::</option>	
-          
-                <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
-          
-                <option value="일반셋탑">일반셋탑</option>
-          
-                <option value="UHD셋탑">UHD셋탑</option>
-          
-                <option value="기가지니2셋탑">기가지니2셋탑</option>
-      
-                        </select>
-                        <select name="board_wifi" class="txtbox Wid19 mWid70">
-                        <option value="">::와이파이 ::</option>	
-          
-                <option value="신청안함(기존 공유기 사용)">신청안함(기존 공유기 사용)</option>
-          
-                <option value="신청">신청</option>
-      
-                        </select>
-                </td>
+                        <div>
+                            <select name="board_internet" class="txtbox Wid19 mWid70">
+                                <option value="">::인터넷::</option>	
+                                <option value="올레인터넷(100M)">올레인터넷(100M)</option>
+                                <option value="기가인터넷 콤팩트(500M)">기가인터넷 콤팩트(500M)</option>
+                                <option value="기가인터넷(1G)">기가인터넷(1G)</option>
+                            </select>
+                            <select name="board_tv" class="txtbox Wid19 mWid70">
+                                <option value="">::TV ::</option>	
+                                <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
+                                <option value="OTV슬림(구 OTV10) - 228채널">OTV슬림(구 OTV10) - 228채널</option>
+                                <option value="OTV라이트(구 OTV12) - 238채널">OTV라이트(구 OTV12) - 238채널</option>
+                                <option value="OTV에센스(구 OTV15) - 261채널">OTV에센스(구 OTV15) - 261채널</option>
+                            </select>
+                            <select name="board_tel" class="txtbox Wid19 mWid70" onchange="fnc_tel_change(this.value);">
+                                <option value="">::전화::</option>	
+                                <option value="신청안함N">신청안함</option>
+                                <option value="일반(유선)전화 - 신규가입N">일반(유선)전화 - 신규가입</option>
+                                <option value="일반(유선)전화 - 번호이동Y">일반(유선)전화 - 번호이동</option>
+                                <option value="WiFi(무선)전화 - 신규가입N">WiFi(무선)전화 - 신규가입</option>
+                                <option value="WiFi(무선)전화 - 번호이동Y">WiFi(무선)전화 - 번호이동</option>
+                            </select>
+                            <select name="board_settop" class="txtbox Wid19 mWid70">
+                                <option value="">::셋탑박스 ::</option>	
+                                <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
+                                <option value="일반셋탑">일반셋탑</option>
+                                <option value="UHD셋탑">UHD셋탑</option>
+                                <option value="기가지니2셋탑">기가지니2셋탑</option>
+                            </select>
+                            <select name="board_wifi" class="txtbox Wid19 mWid70">
+                                <option value="">::와이파이 ::</option>	
+                                <option value="신청안함(기존 공유기 사용)">신청안함(기존 공유기 사용)</option>
+                                <option value="신청">신청</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p class="comment">
+                                * 휴대폰 결합을 하실 경우 인터넷 설치후 1개월 이내에 100번에 전화하셔서 결합신청해주셔야 합니다."
+                            </p>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                   <td class="tdFirst">약정 선택</td>

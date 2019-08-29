@@ -38,6 +38,7 @@ img { border:0px;vertical-align:top; }
 #application table {clear:both; text-align:left; margin:0 auto; margin-bottom:40px; border-top:solid 1px #d5d5d5; line-height:45px; width:100%; font-family: '¸¼Àº °íµñ', sans-serif;}
 #application table td {border-bottom:solid 1px #ccc; font-weight:normal; line-height:23px; padding:18px 0 ; font-size:16px; padding-left:15px;}
 #application table td.tdFirst {background-color:#f5f5f5; font-weight:bold; width:19%; color:#333; padding-left:4%;}
+#application table td div p.comment {font-size: 14px; margin-top: 10px;}
 
 #application table td p {float:left;}
 #application table td .appliBtn {height:26px;}

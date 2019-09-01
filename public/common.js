@@ -185,26 +185,9 @@ function sample4_execDaumPostcode(Target1, Target2, Target3) {
 	}).open();
 }
 
-function fnc_sk_check(frm) {
-	if(frm.p_tell_combiation.value === "미선택") {
-		alert("휴데폰 결합 정보를 선택해주세요!");
-		frm.p_tell_combiation.focus();
-		return false;
-	}
-
-	return true;
-}
-
-
 function fnc_custom_regist(form_name)
 {
 	var frm = document.getElementById(form_name);
-
-	if(frm.vendor.value === "SK") {
-		if(!fnc_sk_check(frm)) {
-			return;
-		}
-	}
 
 	if(frm.c_jumin2 && frm.c_jumin2.value=="")
 	{
@@ -431,6 +414,12 @@ function fnc_custom_regist(form_name)
 			frm.p_product_color.focus();
 			return;
 		}
+	}
+
+	if(frm.p_combiation && frm.p_combiation.value === "") {
+		alert("결합 정보를 선택해주세요!");
+		frm.p_combiation.focus();
+		return false;
 	}
 
 	if(frm.w_agree.checked==false)

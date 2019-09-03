@@ -55,7 +55,7 @@ function fnc_tel_change(Value)
 			<tr>
 				<td class="tdFirst">가입자명</td>
 				<td>
-					<input type="text" name="c_name" value="" class="txtbox Wid30 mWid70"></td>
+					<input id="c_name" type="text" name="c_name" value="" class="txtbox Wid30 mWid70" onblur="fncCheckOwnerName()"></td>
 			</tr>
 			<tr>
 			  <td class="tdFirst">휴대폰</td>
@@ -284,7 +284,7 @@ function fnc_tel_change(Value)
                 </tr>
                 <tr id="style_view_12" style="">
                   <td class="tdFirst">예금주</td>
-                  <td><input type="text" name="g_bank_holder" value="" class="txtbox Wid30 mWid70"></td>
+                  <td><input id="g_bank_holder" type="text" name="g_bank_holder" value="" class="txtbox Wid30 mWid70" onblur="fncCheckOwnerName();"></td>
                 </tr>
 
 				<tr height="30" id="style_view_13" style="display: none;"> 
@@ -347,9 +347,16 @@ function fnc_tel_change(Value)
 				<tr height="30" id="style_view_15" style="display: none;">
 					<td class="tdFirst">카드주 명</td>
 					<td>
-						<input type="text" name="g_card_holder" class="txtbox Wid30 mWid70" size="15" maxlength="15"></td>
+						<input id="g_card_holder" type="text" name="g_card_holder" class="txtbox Wid30 mWid70" size="15" maxlength="15" onblur="fncCheckOwnerName(this);"></td>
 				</tr> 
-
+				<tr id="style_view_16" style="display: none;">
+					<td colspan="2">
+						가입자와 납부자 명의가 다를 경우, 아래의 서류를 찍어서 010-4332-3396 으로 보내주셔야 합니다. <br>
+						1. 가입자 신분증 <br>
+						2. 납부자 신분증 <br>
+						3. 가족관계증명서 (가족이 아닐 경우, 위임장)
+					</td>
+				</tr>
             </tbody>
 		</table>
 
@@ -504,12 +511,12 @@ function fnc_tel_change(Value)
 					</select></td>
 			</tr>
 			<tr>
-				<td class="tdFirst">※계좌번호 </td>
+				<td class="tdFirst">계좌번호</td>
 				<td>
 					<input type="text" name="g_sp_bank_acount" class="txtbox  Wid30 mWid70" value="" size="25" maxlength="30" style="ime-mode:disabled;" onkeyup="fncOnlyNum(this); fncReplaceCheck(this,'.'); fncReplaceCheck(this,',');"></td>
 			</tr>
 			<tr height="30">
-				<td class="tdFirst">※ 예 금 주 
+				<td class="tdFirst">예 금 주 
 				</td><td>
 					<input type="text" name="g_sp_bank_holder" class="txtbox" value="" size="10" maxlength="10"></td>
 			</tr>

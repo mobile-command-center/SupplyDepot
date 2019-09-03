@@ -44,6 +44,24 @@ function fncCheckOwnerName() {
 	}
 }
 
+function fncCheckSPOwnerName() {
+	var customerName = document.getElementById('c_name');
+	var spBankHolderName = document.getElementById('g_sp_bank_holder');
+
+	if(customerName.value === '') {
+		return;
+	}
+
+	if(spBankHolderName.value !== '') {
+		if(customerName.value !== spBankHolderName.value) {
+			document.getElementById("style_view_17").style.display = "table-row";
+			alert('가입자와 사은품 수령인 명의가 다를 경우, 추가 서류가 필요합니다.');
+		} else {
+			document.getElementById("style_view_17").style.display = "none";
+		}
+	}
+}
+
 // 오직 숫자만 입력 -- 스타일에 ime-mode:disabled 필요 onKeyUp
 function fncOnlyNumber(objtext1) 
 {

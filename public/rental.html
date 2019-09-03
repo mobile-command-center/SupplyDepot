@@ -32,7 +32,7 @@
                     <tr>
                         <td class="tdFirst">성명</td>
                         <td>
-                            <input id="c_name" type="text" name="c_name" value="" class="txtbox Wid30 mWid70" onblur="fncCheckOwnerName()"></td>
+                            <input id="c_name" type="text" name="c_name" value="" class="txtbox Wid30 mWid70" onblur="fncCheckOwnerName();fncCheckSPOwnerName();"></td>
                     </tr>
                     <tr>
                     <td class="tdFirst">휴대폰</td>
@@ -77,7 +77,7 @@
                 </table>
 
                 <div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">납부자정보</p>
-                    <p class="appliInfo"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_custom_copy('frm_regist',this);"> 위 정보와 같음 </p></div>
+                    <p class="appliInfo"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_custom_copy('frm_regist',this);fncCheckOwnerName();"> 위 정보와 같음 </p></div>
                 <table cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -314,7 +314,7 @@
                 </table>
         
                 <div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">사은품 (현금)
-			        </p><p class="appliInfo"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_sp_bank_copy('frm_regist',this);"> 위 정보와 같음 </p>
+			        </p><p class="appliInfo"><input type="checkbox" name="content_copy" value="Y" class="checkbox" onclick="g_sp_bank_copy('frm_regist',this);fncCheckSPOwnerName();"> 위 정보와 같음 </p>
                 </div>
                 
                 <table cellpadding="0" cellspacing="0">
@@ -452,7 +452,15 @@
                         <tr height="30">
                             <td class="tdFirst">예 금 주 
                             </td><td>
-                                <input type="text" name="g_sp_bank_holder" class="txtbox" value="" size="10" maxlength="10"></td>
+                            <input id="g_sp_bank_holder" type="text" name="g_sp_bank_holder" class="txtbox" value="" size="10" maxlength="10" onblur="fncCheckSPOwnerName()"></td>
+                        </tr>
+                        <tr id="style_view_17" style="display: none;">
+                            <td colspan="2">
+                                가입자와 사은품 수령인 명의가 다를 경우, 아래의 서류를 찍어서 010-4332-3396 으로 보내주셔야 합니다. <br>
+                                1. 가입자 신분증 <br>
+                                2. 사은품 수령자 신분증 <br>
+                                3. 가족관계증명서 (가족이 아닐 경우, 위임장)
+                            </td>
                         </tr>
                     </tbody>
                 </table>

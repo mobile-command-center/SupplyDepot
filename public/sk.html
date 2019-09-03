@@ -132,8 +132,11 @@ function fnc_tel_change(Value)
 			  </td>
 			</tr>
 			<tr>
-			  <td class="tdFirst">주민번호</td>
-			  <td><input type="text" id="c_jumin1" name="c_jumin1" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="6" onkeyup="fncOnlyNumber(this);">-<input type="password" id="c_jumin2" name="c_jumin2" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="7" onkeyup="fncOnlyNumber(this);" onblur="fncCheckSecurityNumber();"></td>
+			  <td id="style_view_18" class="tdFirst">주민등록번호</td>
+			  <td>
+				<input type="text" id="c_jumin1" name="c_jumin1" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="6" onkeyup="fncOnlyNumber(this);">-<input type="password" id="c_jumin2" name="c_jumin2" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="7" onkeyup="fncOnlyNumber(this);" onblur="fncCheckSecurityNumber();">
+				<input type="checkbox" name="c_foreigner_check" value="Y" class="checkbox" onclick="event_style_view('frm_regist','C');">외국인
+			  </td>
 			</tr>
 
 		</tbody>

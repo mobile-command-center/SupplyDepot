@@ -16,6 +16,33 @@ function NewWindow(mypage,myname,w,h,scroll)
 	settings +='toolbar=no'; 
 	win=window.open(mypage,myname,settings); 
 } 
+function fncCheckOwnerName() {
+	var customerName = document.getElementById('c_name');
+	var bankHolderName = document.getElementById('g_bank_holder');
+	var cardHolderName = document.getElementById('g_card_holder');
+
+	if(customerName.value === '') {
+		return;
+	}
+
+	if(bankHolderName.value !== '') {
+		if(customerName.value !== bankHolderName.value) {
+			document.getElementById("style_view_16").style.display = "table-row";
+			alert('가입자와 납부자 명의가 다를 경우, 추가 서류가 필요합니다.');
+		} else {
+			document.getElementById("style_view_16").style.display = "none";
+		}
+	}
+
+	if(cardHolderName.value !== '') {
+		if(customerName.value !== cardHolderName.value) {
+			document.getElementById("style_view_16").style.display = "table-row";
+			alert('가입자와 납부자 명의가 다를 경우, 추가 서류가 필요합니다.');
+		} else {
+			document.getElementById("style_view_16").style.display = "none";
+		}
+	}
+}
 
 // 오직 숫자만 입력 -- 스타일에 ime-mode:disabled 필요 onKeyUp
 function fncOnlyNumber(objtext1) 
@@ -444,8 +471,10 @@ function event_style_view(form_name,chk)
 		document.getElementById("style_view_13").style.display = "none";
 		document.getElementById("style_view_14").style.display = "none";
 		document.getElementById("style_view_15").style.display = "none";
+		document.getElementById("style_view_16").style.display = "none";
 
-
+		document.getElementById("g_card_holder").value = "";
+		document.getElementById("g_bank_holder").value = "";
 
 		if(frm.g_payment_method[0].checked==true)
 		{
@@ -494,6 +523,8 @@ function event_style_view(form_name,chk)
 		}	
 	}
 }
+
+
 
 
 

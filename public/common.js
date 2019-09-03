@@ -82,6 +82,8 @@ function fncOnlyNumber(objtext1)
 }
 
 function fncCheckSecurityNumber() {
+	var frm = document.getElementById('frm_regist');
+
 	var jumin1 = document.getElementById('c_jumin1');
 	var jumin2 = document.getElementById('c_jumin2');
 	var securityNumber = jumin1.value.split('').concat(jumin2.value.split(''));
@@ -90,10 +92,18 @@ function fncCheckSecurityNumber() {
 		return;
 	}
 
-	//유효성 체크
-	if(!Jumin_chk(securityNumber)) {
-		jumin2.value = '';
-		alert('잘못된 주민등록 번호 입니다.');
+	if(frm.c_foreigner_check.checked) {
+		//외국인 등록번호 유효성 체크
+		if(!Foreign_chk(securityNumber)) {
+			jumin2.value = '';
+			alert('잘못된 외국인 등록번호 입니다.');
+		}
+	} else {
+		//주민등록번호 유효성 체크
+		if(!Jumin_chk(securityNumber)) {
+			jumin2.value = '';
+			alert('잘못된 주민등록 번호 입니다.');
+		}
 	}
 }
 
@@ -156,18 +166,54 @@ function EnterNextFocus(form_name,nextcol)
 	}
 }  
 
+//외국인 등록번호 체크
+function Foreign_chk(securityNumber)
+{
+	var genderNumber = securityNumber[6];
+
+	if (genderNumber < 5 || genderNumber > 8) {
+		//1900년대 남자 5, 여자 6
+		//2000년대 남자 7, 여자 8
+		return false;
+	}
+
+	if (parseInt(securityNumber[7]+securityNumber[8], 10) % 2 != 0) {
+		return false;
+	}
+
+	var compare = [2,3,4,5,6,7,8,9,2,3,4,5];
+
+	var sum = compare.reduce(function(acc, val, idx) {
+		return acc += parseInt(securityNumber[idx], 10) * val;
+	}, 0);
+
+	var lastSecurityNumber = parseInt(securityNumber[securityNumber.length - 1], 10);
+	var checkSum = ((11 - (sum % 11)) % 10 + 2) % 10;
+
+	return (lastSecurityNumber === checkSum);
+}
+
 // 주민등록번호 체크
 function Jumin_chk(securityNumber)
 {
+	var sum = 0;
+	var genderNumber = securityNumber[6];
+
+	if (genderNumber < 0 || genderNumber > 4) {
+		//1900년대 남자 1, 여자 2
+		//2000년대 남자 3, 여자 4
+		return false;
+	}
+
 	var compare = [2,3,4,5,6,7,8,9,2,3,4,5];
 
-	var N = compare.reduce(function(acc, val, idx) {
+	var sum = compare.reduce(function(acc, val, idx) {
 		return acc += parseInt(securityNumber[idx], 10) * val;
 	}, 0);
 
 	var lastSecurityNumber = parseInt(securityNumber[securityNumber.length - 1], 10);
 
-	var checkSum = (11 - (N % 11)) % 10;
+	var checkSum = (11 - (sum % 11)) % 10;
 
 	return (lastSecurityNumber === checkSum);
 }
@@ -540,6 +586,17 @@ function event_style_view(form_name,chk)
 			document.getElementById("style_view_03").style.display = "";	
 		}	
 	}
+
+	if(chk=="C")
+	{
+		document.getElementById('c_jumin2').value = '';
+
+		if(frm.c_foreigner_check.checked) {
+			document.getElementById("style_view_18").textContent = "외국인 등록번호";
+		} else {
+			document.getElementById("style_view_18").textContent = "주민등록번호";
+		}
+	}
 }
 
 
@@ -562,6 +619,11 @@ function g_custom_copy(form_name,chk)
 		frm.g_bank_holder.value="";
 		frm.g_bank_jumin1.value="";
 	}
+}
+
+function c_foreigner_check() 
+{
+
 }
 
 

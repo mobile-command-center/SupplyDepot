@@ -540,57 +540,47 @@ function fnc_tel_change(Value)
         <table cellpadding="0" cellspacing="0">
 		<tbody>
 			<tr>
-				<td class="tdFirst">가입 상품 </td>
+				<td class="tdFirst">가입 상품</td>
 				<td>
 					<select name="board_internet" class="txtbox Wid19 mWid70">
-					<option value="">::인터넷::</option>	
-  	
-			<option value="스마트 다이렉트(100M)">스마트 다이렉트(100M)</option>
-  	
-			<option value="기가인터넷 라이트(500M)">기가인터넷 라이트(500M)</option>
-  	
-			<option value="기가인터넷(1G)">기가인터넷(1G)</option>
-  
+						<option value="">::인터넷::</option>	
+						<option value="스마트 다이렉트(100M)">스마트 다이렉트(100M)</option>
+						<option value="기가인터넷 라이트(500M)">기가인터넷 라이트(500M)</option>
+						<option value="기가인터넷(1G)">기가인터넷(1G)</option>
 					</select>
 					<select name="board_tv" class="txtbox Wid19 mWid70">
-					<option value="">::TV ::</option>	
-  	
-			<option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
-  	
-			<option value="B TV Lite - 211채널">B TV Lite - 211채널</option>
-  	
-			<option value="B TV All - 234채널">B TV All - 234채널</option>
-  
+						<option value="">::TV::</option>	
+						<option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
+						<option value="B TV Lite - 211채널">B TV Lite - 211채널</option>
+						<option value="B TV All - 234채널">B TV All - 234채널</option>
 					</select>
-					
+					<select name="board_tv_add" class="txtbox Wid19 mWid70">
+						<option value="">::TV추가설치 ::</option>	
+						<option value="1대">1대 추가</option>
+						<option value="2대">2대 추가</option>
+						<option value="3대">3대 추가</option>
+					</select>
 					<select name="board_tel" class="txtbox Wid19 mWid70" onchange="fnc_tel_change(this.value);">
-					<option value="">::전화::</option>	
-  	
-			<option value="신청안함N">신청안함</option>
-  	
-			<option value="일반(유선)전화 - 신규가입N">일반(유선)전화 - 신규가입</option>
-  	
-			<option value="일반(유선)전화 - 번호이동Y">일반(유선)전화 - 번호이동</option>
-  	
-			<option value="WiFi(무선)전화 - 신규가입N">WiFi(무선)전화 - 신규가입</option>
-  	
-			<option value="WiFi(무선)전화 - 번호이동Y">WiFi(무선)전화 - 번호이동</option>
-  
+						<option value="">::전화::</option>	
+						<option value="신청안함N">신청안함</option>
+						<option value="일반(유선)전화 - 신규가입N">일반(유선)전화 - 신규가입</option>
+						<option value="일반(유선)전화 - 번호이동Y">일반(유선)전화 - 번호이동</option>
+						<option value="WiFi(무선)전화 - 신규가입N">WiFi(무선)전화 - 신규가입</option>
+						<option value="WiFi(무선)전화 - 번호이동Y">WiFi(무선)전화 - 번호이동</option>
 					</select>
-
-				<select name="board_settop" class="txtbox Wid19 mWid70">
-					<option value="">::셋탑박스 ::</option>	
-					<option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
-					<option value="UHD(HDR)셋탑">UHD(HDR)셋탑</option>
-					<option value="스마트티비셋탑">스마트티비셋탑</option>
-					<option value="NUGU셋탑">NUGU셋탑</option>
-				</select>
-				<select name="board_wifi" class="txtbox Wid19 mWid70">
-					<option value="">::와이파이 ::</option>	
-					<option value="신청안함(기존 공유기 사용)">신청안함(기존 공유기 사용)</option>
-					<option value="신청">신청</option>
-				</select>
-			</td>
+					<select name="board_settop" class="txtbox Wid19 mWid70">
+						<option value="">::셋탑박스::</option>	
+						<option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
+						<option value="UHD(HDR)셋탑">UHD(HDR)셋탑</option>
+						<option value="스마트티비셋탑">스마트티비셋탑</option>
+						<option value="NUGU셋탑">NUGU셋탑</option>
+					</select>
+					<select name="board_wifi" class="txtbox Wid19 mWid70">
+						<option value="">::와이파이::</option>	
+						<option value="신청안함(기존 공유기 사용)">신청안함(기존 공유기 사용)</option>
+						<option value="신청">신청</option>
+					</select>
+				</td>
 			</tr>
 			<tr>
 			  <td class="tdFirst">약정 선택</td>

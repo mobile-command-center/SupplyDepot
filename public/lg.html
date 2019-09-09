@@ -541,42 +541,67 @@
                 <table cellpadding="0" cellspacing="0">
                 <tbody>
                     <tr>
-                        <td class="tdFirst">가입 상품 </td>
+                        <td class="tdFirst">인터넷</td>
                         <td>
-                            <div>
-                                <select name="board_internet" class="txtbox Wid19 mWid70">
-                                    <option value="">::인터넷::</option>	
-                                    <option value="와이파이기본_광랜안심(100M)">와이파이기본_광랜안심(100M)</option>
-                                    <option value="와이파이기본_기가슬림안심(500M)">와이파이기본_기가슬림안심(500M)</option>
-                                    <option value="와이파이기본_기가안심(1G)">와이파이기본_기가안심(1G)</option>
-                                </select>
-                                <select name="board_tv" class="txtbox Wid19 mWid70">
-                                    <option value="">::TV ::</option>	
-                                    <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
-                                    <option value="TV베이직 - 183채널">TV베이직 - 183채널</option>
-                                    <option value="TV프리미엄 - 223채널">TV프리미엄 - 223채널</option>
-                                    <option value="TV VOD고급형 - 210채널">TV VOD고급형 - 210채널</option>
-                                    <option value="프리미엄 넷플릭스HD TV - 223채널">프리미엄 넷플릭스HD TV - 223채널</option>
-                                    <option value="프리미엄 넷플릭스UHD TV - 223채널">프리미엄 넷플릭스UHD TV - 223채널</option>
-                                </select>
-                                <select name="board_tel" class="txtbox Wid19 mWid70" onchange="fnc_tel_change(this.value);">
-                                    <option value="">::전화::</option>	
-                                    <option value="신청안함N">신청안함</option>
-                                    <option value="일반(유선)전화 - 신규가입N">일반(유선)전화 - 신규가입</option>
-                                    <option value="일반(유선)전화 - 번호이동Y">일반(유선)전화 - 번호이동</option>
-                                    <option value="WiFi(무선)전화 - 신규가입N">WiFi(무선)전화 - 신규가입</option>
-                                    <option value="WiFi(무선)전화 - 번호이동Y">WiFi(무선)전화 - 번호이동</option>
-                                </select>
-                                <select name="board_settop" class="txtbox Wid19 mWid70">
-                                    <option value="">::셋탑박스 ::</option>	
-                                    <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
-                                    <option value="UHD셋탑">UHD셋탑</option>
-                                </select>
-                                <select name="board_wifi" class="txtbox Wid19 mWid70">
-                                    <option value="">::와이파이 ::</option>	
-                                    <option value="신청">신청</option>
-                                </select>
-                            </div>
+                            <select name="board_internet" class="txtbox Wid19 mWid70">
+                                <option value="">::인터넷::</option>	
+                                <option value="와이파이기본_광랜안심(100M)">와이파이기본_광랜안심(100M)</option>
+                                <option value="와이파이기본_기가슬림안심(500M)">와이파이기본_기가슬림안심(500M)</option>
+                                <option value="와이파이기본_기가안심(1G)">와이파이기본_기가안심(1G)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdFirst">TV</td>
+                        <td>
+                            <select name="board_tv" class="txtbox Wid19 mWid70">
+                                <option value="">::TV::</option>	
+                                <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
+                                <option value="TV베이직 - 183채널">TV베이직 - 183채널</option>
+                                <option value="TV프리미엄 - 223채널">TV프리미엄 - 223채널</option>
+                                <option value="TV VOD고급형 - 210채널">TV VOD고급형 - 210채널</option>
+                                <option value="프리미엄 넷플릭스HD TV - 223채널">프리미엄 넷플릭스HD TV - 223채널</option>
+                                <option value="프리미엄 넷플릭스UHD TV - 223채널">프리미엄 넷플릭스UHD TV - 223채널</option>
+                            </select>
+                            <select name="board_tv_add" class="txtbox Wid19 mWid70">
+                                <option value="">::TV추가설치::</option>
+                                <option value="신청안함">신청안함</option>
+                                <option value="1대">1대 추가</option>
+                                <option value="2대">2대 추가</option>
+                                <option value="3대">3대 추가</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdFirst">전화</td>
+                        <td>
+                            <select name="board_tel" class="txtbox Wid19 mWid70" onchange="fnc_tel_change(this.value);">
+                                <option value="">::전화::</option>	
+                                <option value="신청안함N">신청안함</option>
+                                <option value="일반(유선)전화 - 신규가입N">일반(유선)전화 - 신규가입</option>
+                                <option value="일반(유선)전화 - 번호이동Y">일반(유선)전화 - 번호이동</option>
+                                <option value="WiFi(무선)전화 - 신규가입N">WiFi(무선)전화 - 신규가입</option>
+                                <option value="WiFi(무선)전화 - 번호이동Y">WiFi(무선)전화 - 번호이동</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdFirst">셋탑박스</td>
+                        <td>
+                            <select name="board_settop" class="txtbox Wid19 mWid70">
+                                <option value="">::셋탑박스::</option>	
+                                <option value="신청안함(인터넷 단독시)">신청안함(인터넷 단독시)</option>
+                                <option value="UHD셋탑">UHD셋탑</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdFirst">와이파이</td>
+                        <td>
+                            <select name="board_wifi" class="txtbox Wid19 mWid70">
+                                <option value="">::와이파이 ::</option>	
+                                <option value="신청">신청</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>

@@ -401,6 +401,13 @@ function fnc_custom_regist(form_name)
 		frm.board_tv.focus();
 		return;
 	}
+
+	if(frm.board_tv_add && frm.board_tv_add.value =="")
+	{
+		alert("TV 추가 대수를 선택해 주세요!");
+		frm.board_tv_add.focus();
+		return;
+	}
 	
 
 	if(frm.board_tel && frm.board_tel.value=="")

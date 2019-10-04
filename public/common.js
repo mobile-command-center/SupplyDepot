@@ -62,6 +62,22 @@ function fncCheckSPOwnerName() {
 	}
 }
 
+// 1 ~ 12 사이 숫자만 입력 가능
+function fncOnlyMonthlyNumber(objtext1) {
+	var inText = objtext1.value;
+	var number = parseInt(inText, 10);
+
+	if(number > 0 && number < 13) {
+		return true;
+	} else {
+
+		objtext1.value=inText.replace(inText.charAt(inText.length -1),"");
+		objtext1.focus();
+
+		return false;
+	}
+}
+
 // 오직 숫자만 입력 -- 스타일에 ime-mode:disabled 필요 onKeyUp
 function fncOnlyNumber(objtext1) 
 {

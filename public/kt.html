@@ -4,6 +4,7 @@
     <meta name="robots" content="noindex, nofollow">
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader-default.css">
     <link rel="stylesheet" media="(max-width: 480px)" href="style.mobile.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
     <link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
@@ -35,7 +36,7 @@
     
     
     </head><body>
-    
+    <div data-loading-spinner class="loader loader-default is-active" data-text="잠시만 기다려 주세요." style="display: none;"></div>
     <form id="frm_regist" name="frm_regist" action="https://wtoj0rio23.execute-api.us-west-2.amazonaws.com/dev/starport/v1/telecom" enctype="MULTIPART/FORM-DATA" method="POST" accept-charset="utf-8"> 
     <input type="hidden" name="vendor" value="KT">
     <input type="hidden" name="telephone_carrier_move_chk" value="">
@@ -702,6 +703,4 @@
         </div>
     </div>
     </form>
-    
-    
     </body></html>

@@ -440,6 +440,12 @@ function fnc_custom_regist(form_name)
 		return;
 	}
 
+	var spinner = document.querySelector('[data-loading-spinner]');
+	
+	if(spinner) {
+		spinner.style.display = "block";
+	}
+
 	frm.submit();
 }
 

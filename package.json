@@ -4,7 +4,7 @@
   "description": "가입 신청 페이지 이다.",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --config ./.mocharc.json",
     "start": "cross-env NODE_ENV=development rollup --config ./config/rollup/rollup.config.js && print-sizes ./public",
     "lint": "tslint -p ./config/typescript/tsconfig.prod.json"
   },

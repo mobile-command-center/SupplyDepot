@@ -5,7 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=development rollup --config ./config/rollup/rollup.config.js && print-sizes ./public"
+    "start": "cross-env NODE_ENV=development rollup --config ./config/rollup/rollup.config.js && print-sizes ./public",
+    "lint": "tslint -p ./config/typescript/tsconfig.prod.json"
   },
   "repository": {
     "type": "git",

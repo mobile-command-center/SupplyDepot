@@ -501,12 +501,6 @@ function fnc_custom_regist(form_name)
 			}
 		}
 		
-		frm.p_product.forEach(function(itemBox) {
-			if(itemBox.checked) {
-				checked = true;
-			}	
-		});
-
 		if(!checked) {
 			alert("가입상품을 선택해 주세요!");
 			frm.p_product[0].focus();

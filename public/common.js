@@ -648,9 +648,9 @@ function g_phone_copy_check(form_name,chk)
 		frm.c_tel32.value=frm.c_tel22.value;
 		frm.c_tel33.value=frm.c_tel23.value;
 
-		frm.c_tel31.disabled=true;
-		frm.c_tel32.disabled=true;
-		frm.c_tel33.disabled=true;
+		frm.c_tel31.readOnly=true;
+		frm.c_tel32.readOnly=true;
+		frm.c_tel33.readOnly=true;
 
 		frm.c_tel31.style.background='#e5e5e5';
 		frm.c_tel32.style.background='#e5e5e5';
@@ -662,9 +662,9 @@ function g_phone_copy_check(form_name,chk)
 		frm.c_tel32.value="";
 		frm.c_tel33.value="";
 
-		frm.c_tel31.disabled=false;
-		frm.c_tel32.disabled=false;
-		frm.c_tel33.disabled=false;
+		frm.c_tel31.readOnly=false;
+		frm.c_tel32.readOnly=false;
+		frm.c_tel33.readOnly=false;
 
 		frm.c_tel31.style.background='#ffffff';
 		frm.c_tel32.style.background='#ffffff';

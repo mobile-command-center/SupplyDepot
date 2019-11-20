@@ -623,7 +623,47 @@ function event_style_view(form_name,chk)
 }
 
 
+function g_phone_copy_check(form_name,chk)
+{
+	var frm = document.getElementById(form_name);
 
+	if(chk.checked==true)
+	{
+
+		if(frm.c_tel22.value === '' || frm.c_tel23.value === '')
+		{
+			alert("휴대폰 정보를 먼저 입력하십시오");
+			chk.checked = false;
+			return;
+		}
+
+		frm.c_tel31.value=frm.c_tel21.value;
+		frm.c_tel32.value=frm.c_tel22.value;
+		frm.c_tel33.value=frm.c_tel23.value;
+
+		frm.c_tel31.disabled=true;
+		frm.c_tel32.disabled=true;
+		frm.c_tel33.disabled=true;
+
+		frm.c_tel31.style.background='#e5e5e5';
+		frm.c_tel32.style.background='#e5e5e5';
+		frm.c_tel33.style.background='#e5e5e5';
+	}
+	else
+	{
+		frm.c_tel31.value="";
+		frm.c_tel32.value="";
+		frm.c_tel33.value="";
+
+		frm.c_tel31.disabled=false;
+		frm.c_tel32.disabled=false;
+		frm.c_tel33.disabled=false;
+
+		frm.c_tel31.style.background='#ffffff';
+		frm.c_tel32.style.background='#ffffff';
+		frm.c_tel33.style.background='#ffffff';
+	}
+}
 
 
 //(동일항목 체크)

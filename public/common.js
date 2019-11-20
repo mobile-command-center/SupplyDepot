@@ -323,6 +323,13 @@ function fnc_custom_regist(form_name)
 		frm.c_tel22.focus();
 		return;
 	}
+
+	if(frm.c_tel31.value=="" || frm.c_tel32.value=="")
+	{
+		alert("상딤받으신 연락처 입력해 주세요!");
+		frm.c_tel31.focus();
+		return;
+	}
 	
 
 	if(frm.g_auth.value=="")

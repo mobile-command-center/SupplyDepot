@@ -386,7 +386,7 @@ function fnc_custom_regist(form_name)
 
 	}
 
-	if(frm.g_sp_giftcard_code.value==="0") {
+	if(frm.g_sp_giftcard_code && frm.g_sp_giftcard_code.value==="0") {
 		alert("사은품 상품권 종류를 선택해 주세요!");
 		frm.g_sp_gitcard_code.focus();
 		return;

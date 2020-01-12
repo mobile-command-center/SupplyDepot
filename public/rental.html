@@ -79,9 +79,9 @@
                     </td>
                     </tr>
                     <tr>
-                    <td class="tdFirst">생년월일</td>
+                    <td class="tdFirst">주민번호 앞자리</td>
                     <td>
-                        <input type="text" id="c_jumin1" name="c_jumin1" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="6" onkeyup="fncOnlyNumber(this);">
+                        <input type="text" id="c_jumin1" name="c_jumin1" value="" class="txtbox" style="width:80px;ime-mode:disabled;" maxlength="6" onkeyup="fncOnlyNumber(this);" onblur="fncCheckPrefixSecurityNumber();">
                         <input type="radio" name="c_gender" value="남" checked="">남&nbsp;
                         <input type="radio" name="c_gender" value="여" >여
                     </td>

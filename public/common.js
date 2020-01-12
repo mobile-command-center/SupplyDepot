@@ -97,6 +97,25 @@ function fncOnlyNumber(objtext1)
 	return true;
 }
 
+function fncCheckPrefixSecurityNumber() {
+	var jumin1 = document.getElementById('c_jumin1');
+
+	if(jumin1.value.length < 6) {
+		jumin1.value = '';
+		alert('생년월일 6자리를 입력해주세요');
+		return;
+	}
+
+	var month = parseInt(jumin1.value.substr(2, 2), 10);
+	var day = parseInt(jumin1.value.substr(4, 2), 10);
+
+	if(month > 12 || day > 31) {
+		jumin1.value = '';
+		alert('올바른 생년월일을 입력해주세요.');
+		return;
+	}
+}
+
 function fncCheckSecurityNumber() {
 	var frm = document.getElementById('frm_regist');
 

@@ -31,8 +31,10 @@ img { border:0px;vertical-align:top; }
 #application .appliTop p.appliLogo_skt img {height: 72px;}
 #application .appliTop p.appliLogo_skb {float:left; padding-right:20px;}
 #application .appliTop p.appliLogo_skb img {height: 72px;}
-#application .appliTop p.appliLogo_skylift {float:left; padding-right:20px;}
-#application .appliTop p.appliLogo_skylift img {height: 72px;}
+#application .appliTop p.appliLogo_cj {float:left; padding-right:20px;}
+#application .appliTop p.appliLogo_cj img {height: 72px;}
+#application .appliTop p.appliLogo_hello {float:left; padding-right:20px;}
+#application .appliTop p.appliLogo_hello img {height: 72px;}
 #application .appliTop p.appliTopTit {float:left; font-size:34px; color:#222; font-weight:900; letter-spacing:-.5px;}
 #application .appliTop p.appliTopTit span {display:block; padding-bottom:4px; font-size:16px; color:#666; font-weight:300; letter-spacing:-1px; font-family: '¸¼Àº °íµñ', sans-serif;}
 #application .appliTop p.appliCall {float:right; text-align:right; padding-top:5px; color:#222;}

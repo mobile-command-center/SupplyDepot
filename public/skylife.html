@@ -44,7 +44,7 @@
     <div id="application">
     
         <div class="appliTop">
-            <p class="appliLogo_skylift"><img src="/images/icon_skylife.png"></p>
+            <p class="appliLogo_skylife"><img src="/images/icon_skylife.png"></p>
             <p class="appliTopTit">가입신청서<span>온라인 신청서를 작성하시면 선 예약접수가 되고 선 해피콜, 개통이 됩니다.</span></p>
             <!--<p class="appliCall">대표번호<span>070-7711-8012</span></p>-->
         </div>
@@ -574,8 +574,11 @@
                         </select>
                         <select name="board_tv_add" class="txtbox Wid19 mWid70">
 							<option value="">::TV추가설치 ::</option>
-                            <option value="신청안함">신청안함</option>
-                            <option value="SKY GReen A+">SKY GReen A+</option>
+                            <option value="신청안함(인터넷단독)">신청안함(인터넷단독)</option>
+                            <option value="총1대설치">총1대설치</option>
+                            <option value="총2대설치">총2대설치</option>
+                            <option value="총3대설치">총3대설치</option>
+                            <option value="총4대설치">총4대설치</option>
                         </select>
                     </td>
                 </tr>
@@ -629,7 +632,7 @@
             </tbody>
             </table>
     
-            <div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">결합정보
+            <div class="appliTitBox"><p class="appliTit"><img src="/images/icon_check.gif">추가정보
             </div>
             <table cellpadding="0" cellspacing="0">
                 <tbody>
@@ -644,7 +647,16 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            * 100M, 200M 인터넷에 GReen TV하면 홈결합 월요금 30% 할인 되지만 고객에게 현금지원금 없음
+                            100M/200M + GReen TV 홈결합 시, 월요금 30% 할인(단, 현금지원 없음)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdFirst">기존KT유무</td>
+                        <td>
+                            <div>
+                                <input type="radio" name="p_kt_user" value="해당없음" checked="true"> 해당없음 &nbsp;
+                                <input type="radio" name="p_kt_user" value="기존KT사용"> 기존KT사용
+                            </div>
                         </td>
                     </tr>
                 </tbody>

@@ -28,7 +28,7 @@
     ```npm install```
   - 로컬 웹서버를 구동한 뒤, 페이지에 접속한다.
     - 아래의 명령어를 실행하면, ```3000```번 포트, ```/public``` 폴더를 root 디렉토리로 로컬 웹서버가 실행된다.
-       ```npm start```
+    - ```npm start```
       - http://localhost:3000/sk.html   // SK 페이지
       - http://localhost:3000/skt.html    //SK 텔레콤 페이지
       - http://localhost:3000/skb.html    //SK 브로드밴드 페이지

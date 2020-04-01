@@ -1,5 +1,15 @@
 # 아정당 가입신청서 페이지
 
+## 시스템 구조
+![image](https://user-images.githubusercontent.com/5215827/78162328-abca8180-7481-11ea-9c8f-d29b4002f7a4.png)
+  - ```ajungweb.co.kr``` 도메인은 ```whois```에서 구입했으며, amazon route53의 dns 서버가 등록되어 있다.
+
+## 프로젝트 구조
+ - 프로젝트 명은 스타크래프트 유닛 또는 건물 이름을 사용하였습니다.
+ - 현재 ```가입신청서 페이지(SupplyDepot)```와 ```가입신청서 API v3 (Hydralisk```) 프로젝트가 리얼환경에서 서비스되고 있습니다.
+![image](https://user-images.githubusercontent.com/5215827/78163990-0f55ae80-7484-11ea-8223-3c115c0597fb.png)
+
+
 ## 폴더 및 코드 구조
   - ```/src   /docs /dist 폴더는 사용되지 않는다.```
   - ```/public/* 폴더만 사용된다.```

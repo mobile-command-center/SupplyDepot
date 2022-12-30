@@ -37,7 +37,7 @@
     "karma-rollup-preprocessor": "^7.0.0",
     "karma-safari-launcher": "^1.0.0",
     "karma-sinon": "^1.0.5",
-    "mocha": "^6.0.2",
+    "mocha": "^10.2.0",
     "nyc": "^13.3.0",
     "print-sizes": "0.0.4",
     "rimraf": "^2.6.3",
